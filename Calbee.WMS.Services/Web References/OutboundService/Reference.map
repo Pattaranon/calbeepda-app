@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd3" filename="OutboundService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://43.229.78.24/WMSService/OutboundService.svc?disco" filename="OutboundService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://43.229.78.24/WMSService/OutboundService.svc?wsdl" filename="OutboundService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd2" filename="OutboundService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd1" filename="OutboundService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd0" filename="OutboundService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd5" filename="OutboundService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd4" filename="OutboundService4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd6" filename="OutboundService5.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

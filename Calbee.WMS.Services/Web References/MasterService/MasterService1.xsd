@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" />
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" />
+  <xs:element name="GetWarehouses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehosuecode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="warehosuename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWarehousesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" minOccurs="0" name="GetWarehousesResult" nillable="true" type="q1:ArrayOfWarehouse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWarehousesUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWarehousesUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" minOccurs="0" name="GetWarehousesUserResult" nillable="true" type="q2:ArrayOfWarehouse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouseCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locationCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locationType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" minOccurs="0" name="GetLocationResult" nillable="true" type="q3:Location" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouseCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locationCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locationType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" minOccurs="0" name="GetLocationsResult" nillable="true" type="q4:ArrayOfLocation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWarehousesUserLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user_id" type="xs:int" />
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWarehousesUserLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetWarehousesUserLocationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" minOccurs="0" name="GetItemResult" nillable="true" type="q5:Item" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemUoms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemUomsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" minOccurs="0" name="GetItemUomsResult" nillable="true" type="q6:ArrayOfItemUom" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" minOccurs="0" name="GetStatusResult" nillable="true" type="q7:ArrayOftbc_Status" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusComboboxItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusComboboxItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" minOccurs="0" name="GetStatusComboboxItemResult" nillable="true" type="q8:ArrayOfComboBoxItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

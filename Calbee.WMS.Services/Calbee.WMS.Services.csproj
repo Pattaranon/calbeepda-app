@@ -1,0 +1,397 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BBC1F19-25E1-449B-A61C-1E585BFD31AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Calbee.WMS.Services</RootNamespace>
+    <AssemblyName>Calbee.WMS.Services</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>Calbee.WMS.Services</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorization\AuthorizeServiceProxy.cs" />
+    <Compile Include="Core\CoreServiceProxy.cs" />
+    <Compile Include="Core\DownloadCAB.cs" />
+    <Compile Include="Count\CountServiceProxy.cs" />
+    <Compile Include="Inbound\InboundServiceProxy.cs" />
+    <Compile Include="Inventory\InventoryServiceProxy.cs" />
+    <Compile Include="Masters\MasterServiceProxy.cs" />
+    <Compile Include="Outbound\OutboundServiceProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceMode\Mode.cs" />
+    <Compile Include="Web References\AuthorizeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CoreService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\InboundService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\InventoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MasterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OutboundService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://43.229.78.24/WMSService/authorizeservice.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\AuthorizeService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/WMSService/authorizeservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://43.229.78.24/WMSService/coreservice.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\CoreService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/WMSService/coreservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://43.229.78.24/WMSService/CountService.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\CountService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/WMSService/CountService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://43.229.78.24/WMSService/inboundservice.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\InboundService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/WMSService/inboundservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://43.229.78.24/WMSService/inventoryservice.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\InventoryService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/WMSService/inventoryservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://43.229.78.24/WMSService/masterservice.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\MasterService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/WMSService/masterservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://43.229.78.24/WMSService/outboundservice.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\OutboundService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/WMSService/outboundservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\AuthorizeService\AuthorizeService.wsdl" />
+    <None Include="Web References\AuthorizeService\AuthorizeService.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\AuthorizeService\AuthorizeService.disco" />
+    <None Include="Web References\AuthorizeService\AuthorizeService0.xsd" />
+    <None Include="Web References\AuthorizeService\AuthorizeService1.xsd" />
+    <None Include="Web References\AuthorizeService\Menu.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthorizeService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AuthorizeService\User.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MasterService\MasterService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\InboundService\InboundService.wsdl" />
+    <None Include="Web References\InboundService\InboundService.xsd" />
+    <None Include="Web References\InboundService\InboundService0.xsd" />
+    <None Include="Web References\InboundService\InboundService1.xsd" />
+    <None Include="Web References\InboundService\InboundService2.xsd" />
+    <None Include="Web References\InboundService\InboundService3.xsd" />
+    <None Include="Web References\MasterService\Item.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MasterService\ItemUom.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MasterService\Location.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MasterService\MasterService.disco" />
+    <None Include="Web References\MasterService\MasterService.xsd" />
+    <None Include="Web References\MasterService\MasterService0.xsd" />
+    <None Include="Web References\MasterService\MasterService1.xsd" />
+    <None Include="Web References\MasterService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MasterService\Warehouse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\InboundService\ComboBoxItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InboundService\InboundDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InboundService\InboundLpnDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InboundService\InboundMaster.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InboundService\InboundService.disco" />
+    <None Include="Web References\InboundService\ReceiptDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InboundService\ReceiptHeader.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InboundService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\InboundService\Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OutboundService\OutboundService.wsdl" />
+    <None Include="Web References\OutboundService\OutboundService.xsd" />
+    <None Include="Web References\OutboundService\OutboundService0.xsd" />
+    <None Include="Web References\OutboundService\OutboundService1.xsd" />
+    <None Include="Web References\OutboundService\OutboundService2.xsd" />
+    <None Include="Web References\OutboundService\OutboundService3.xsd" />
+    <None Include="Web References\OutboundService\OutboundService4.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\InventoryService\InventoryService.wsdl" />
+    <None Include="Web References\InventoryService\InventoryService.xsd" />
+    <None Include="Web References\InventoryService\InventoryService0.xsd" />
+    <None Include="Web References\InventoryService\InventoryService1.xsd" />
+    <None Include="Web References\InventoryService\InventoryService2.xsd" />
+    <None Include="Web References\InventoryService\InventoryService3.xsd" />
+    <None Include="Web References\OutboundService\ComboBoxItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OutboundService\OutboundDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OutboundService\OutboundMaster.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OutboundService\OutboundPickDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OutboundService\OutboundPickMaster.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OutboundService\OutboundService.disco" />
+    <None Include="Web References\OutboundService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OutboundService\Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CoreService\CoreService.wsdl" />
+    <None Include="Web References\CoreService\CoreService.xsd" />
+    <None Include="Web References\CoreService\CoreService0.xsd" />
+    <None Include="Web References\InventoryService\Inventory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InventoryService\InventoryService.disco" />
+    <None Include="Web References\InventoryService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\InventoryService\Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MasterService\ComboBoxItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MasterService\MasterService2.xsd" />
+    <None Include="Web References\MasterService\tbc_Status.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CoreService\CoreService.disco" />
+    <None Include="Web References\CoreService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OutboundService\PickItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calbee.Infra.Common\Calbee.Infra.Common.csproj">
+      <Project>{F9B8E71D-DEF8-4F73-A799-C3BF95996B74}</Project>
+      <Name>Calbee.Infra.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CountService\CountDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CountService\CountService.disco" />
+    <None Include="Web References\CountService\CountService.wsdl" />
+    <None Include="Web References\CountService\CountService.xsd" />
+    <None Include="Web References\CountService\CountService0.xsd" />
+    <None Include="Web References\CountService\CountService1.xsd" />
+    <None Include="Web References\CountService\CountService2.xsd" />
+    <None Include="Web References\CountService\CountService3.xsd" />
+    <None Include="Web References\CountService\CountService4.xsd" />
+    <None Include="Web References\CountService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CountService\Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CountService\tbt_Count.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OutboundService\OutboundService5.xsd" />
+    <None Include="Web References\OutboundService\TruckOrderDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

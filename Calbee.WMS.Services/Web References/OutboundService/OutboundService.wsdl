@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="OutboundService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Truck" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOutboundService_GetOutboundMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundMaster" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundMasters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundMasters" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundMasters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundMastersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundOrderComboBoxItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundOrderComboBoxItem" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundOrderComboBoxItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundOrderComboBoxItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickMaster" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickMasters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickMasters" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickMasters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickMastersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickListNumberComboBoxItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickListNumberComboBoxItem" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickListNumberComboBoxItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickListNumberComboBoxItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetPickingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPickingList" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetPickingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPickingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListDetail" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickSuggestLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickSuggestLocation" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickSuggestLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickSuggestLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListLpn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListLpn" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListLpn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListLpnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListLpns_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListLpns" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListLpns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListLpnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListItems" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListItemLotNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListItemLotNumbers" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListItemLotNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListItemLotNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListItemExpiryDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListItemExpiryDates" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundPickingListItemExpiryDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundPickingListItemExpiryDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundLoadLpn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundLoadLpn" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundLoadLpn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundLoadLpnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_SetPickItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPickItem" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_SetPickItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPickItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_PuttoStagingAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:PuttoStagingAuto" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_PuttoStagingAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PuttoStagingAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_PutToStaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutToStaging" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_PutToStaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutToStagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_SetLoadItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetLoadItem" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_SetLoadItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetLoadItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundTruck_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundTruck" />
+  </wsdl:message>
+  <wsdl:message name="IOutboundService_GetOutboundTruck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundTruckResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOutboundService">
+    <wsdl:operation name="GetOutboundMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundMaster" message="tns:IOutboundService_GetOutboundMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundMasterResponse" message="tns:IOutboundService_GetOutboundMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundMasters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundMasters" message="tns:IOutboundService_GetOutboundMasters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundMastersResponse" message="tns:IOutboundService_GetOutboundMasters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundOrderComboBoxItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundOrderComboBoxItem" message="tns:IOutboundService_GetOutboundOrderComboBoxItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundOrderComboBoxItemResponse" message="tns:IOutboundService_GetOutboundOrderComboBoxItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundDetails" message="tns:IOutboundService_GetOutboundDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundDetailsResponse" message="tns:IOutboundService_GetOutboundDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickMaster" message="tns:IOutboundService_GetOutboundPickMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickMasterResponse" message="tns:IOutboundService_GetOutboundPickMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickMasters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickMasters" message="tns:IOutboundService_GetOutboundPickMasters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickMastersResponse" message="tns:IOutboundService_GetOutboundPickMasters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickListNumberComboBoxItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickListNumberComboBoxItem" message="tns:IOutboundService_GetOutboundPickListNumberComboBoxItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickListNumberComboBoxItemResponse" message="tns:IOutboundService_GetOutboundPickListNumberComboBoxItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPickingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetPickingList" message="tns:IOutboundService_GetPickingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetPickingListResponse" message="tns:IOutboundService_GetPickingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListDetail" message="tns:IOutboundService_GetOutboundPickingListDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListDetailResponse" message="tns:IOutboundService_GetOutboundPickingListDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListDetails" message="tns:IOutboundService_GetOutboundPickingListDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListDetailsResponse" message="tns:IOutboundService_GetOutboundPickingListDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickDetails" message="tns:IOutboundService_GetOutboundPickDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickDetailsResponse" message="tns:IOutboundService_GetOutboundPickDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickSuggestLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickSuggestLocation" message="tns:IOutboundService_GetOutboundPickSuggestLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickSuggestLocationResponse" message="tns:IOutboundService_GetOutboundPickSuggestLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListLpn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListLpn" message="tns:IOutboundService_GetOutboundPickingListLpn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListLpnResponse" message="tns:IOutboundService_GetOutboundPickingListLpn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListLpns">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListLpns" message="tns:IOutboundService_GetOutboundPickingListLpns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListLpnsResponse" message="tns:IOutboundService_GetOutboundPickingListLpns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListItems" message="tns:IOutboundService_GetOutboundPickingListItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListItemsResponse" message="tns:IOutboundService_GetOutboundPickingListItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListItemLotNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListItemLotNumbers" message="tns:IOutboundService_GetOutboundPickingListItemLotNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListItemLotNumbersResponse" message="tns:IOutboundService_GetOutboundPickingListItemLotNumbers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListItemExpiryDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListItemExpiryDates" message="tns:IOutboundService_GetOutboundPickingListItemExpiryDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundPickingListItemExpiryDatesResponse" message="tns:IOutboundService_GetOutboundPickingListItemExpiryDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundLoadLpn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundLoadLpn" message="tns:IOutboundService_GetOutboundLoadLpn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundLoadLpnResponse" message="tns:IOutboundService_GetOutboundLoadLpn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPickItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/SetPickItem" message="tns:IOutboundService_SetPickItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/SetPickItemResponse" message="tns:IOutboundService_SetPickItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PuttoStagingAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/PuttoStagingAuto" message="tns:IOutboundService_PuttoStagingAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/PuttoStagingAutoResponse" message="tns:IOutboundService_PuttoStagingAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutToStaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/PutToStaging" message="tns:IOutboundService_PutToStaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/PutToStagingResponse" message="tns:IOutboundService_PutToStaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLoadItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/SetLoadItem" message="tns:IOutboundService_SetLoadItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/SetLoadItemResponse" message="tns:IOutboundService_SetLoadItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundTruck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundTruck" message="tns:IOutboundService_GetOutboundTruck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutboundService/GetOutboundTruckResponse" message="tns:IOutboundService_GetOutboundTruck_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOutboundService" type="tns:IOutboundService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOutboundMaster">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundMasters">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundMasters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundOrderComboBoxItem">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundOrderComboBoxItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickMaster">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickMasters">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickMasters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickListNumberComboBoxItem">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickListNumberComboBoxItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickingList">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetPickingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListDetail">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickingListDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickingListDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickSuggestLocation">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickSuggestLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListLpn">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickingListLpn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListLpns">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickingListLpns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListItems">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickingListItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListItemLotNumbers">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickingListItemLotNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundPickingListItemExpiryDates">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundPickingListItemExpiryDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundLoadLpn">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundLoadLpn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPickItem">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/SetPickItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PuttoStagingAuto">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/PuttoStagingAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutToStaging">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/PutToStaging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLoadItem">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/SetLoadItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundTruck">
+      <soap:operation soapAction="http://tempuri.org/IOutboundService/GetOutboundTruck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OutboundService">
+    <wsdl:port name="BasicHttpBinding_IOutboundService" binding="tns:BasicHttpBinding_IOutboundService">
+      <soap:address location="http://43.229.78.24/WMSService/OutboundService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Truck" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Truck" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TruckOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:double" />
+      <xs:element minOccurs="0" name="CreateBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DriverId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LoadInDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoadingDatePlan" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoadingId" type="xs:int" />
+      <xs:element minOccurs="0" name="OutDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Sequence" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPallet" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPrice" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="TruckId" type="xs:int" />
+      <xs:element minOccurs="0" name="TruckNoBack" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TruckNoFront" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TruckOrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TruckOrderDetail" nillable="true" type="tns:TruckOrderDetail" />
+</xs:schema>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" />
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" />
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" />
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/OutboundService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Truck" />
+  <xs:element name="GetOutboundMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundMasterResult" nillable="true" type="q1:OutboundMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundMasters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundMastersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundMastersResult" nillable="true" type="q2:ArrayOfOutboundMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundOrderComboBoxItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundOrderComboBoxItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" minOccurs="0" name="GetOutboundOrderComboBoxItemResult" nillable="true" type="q3:ArrayOfComboBoxItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundDetailsResult" nillable="true" type="q4:ArrayOfOutboundDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundPickMasterResult" nillable="true" type="q5:OutboundPickMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickMasters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickMastersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundPickMastersResult" nillable="true" type="q6:ArrayOfOutboundPickMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickListNumberComboBoxItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickListNumberComboBoxItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" minOccurs="0" name="GetOutboundPickListNumberComboBoxItemResult" nillable="true" type="q7:ArrayOfComboBoxItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPickingList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pickinglist_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPickingListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetPickingListResult" nillable="true" type="q8:ArrayOfOutboundPickMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lot_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="expiry_date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serial_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundPickingListDetailResult" nillable="true" type="q9:OutboundPickDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lot_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="expiry_date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serial_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundPickingListDetailsResult" nillable="true" type="q10:ArrayOfOutboundPickDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundPickDetailsResult" nillable="true" type="q11:ArrayOfOutboundPickDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickSuggestLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickSuggestLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOutboundPickSuggestLocationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListLpn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListLpnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundPickingListLpnResult" nillable="true" type="q12:PickItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListLpns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListLpnsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOutboundPickingListLpnsResult" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOutboundPickingListItemsResult" nillable="true" type="q14:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListItemLotNumbers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListItemLotNumbersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOutboundPickingListItemLotNumbersResult" nillable="true" type="q15:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListItemExpiryDates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundPickingListItemExpiryDatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOutboundPickingListItemExpiryDatesResult" nillable="true" type="q16:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundLoadLpn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="picklist_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundLoadLpnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="GetOutboundLoadLpnResult" nillable="true" type="q17:PickItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPickItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="pick_item" nillable="true" type="q18:PickItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPickItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" minOccurs="0" name="SetPickItemResult" nillable="true" type="q19:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PuttoStagingAuto">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PuttoStagingAutoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PuttoStagingAutoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutToStaging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="pick_item" nillable="true" type="q20:PickItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutToStagingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" minOccurs="0" name="PutToStagingResult" nillable="true" type="q21:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLoadItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" minOccurs="0" name="pick_item" nillable="true" type="q22:PickItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLoadItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" minOccurs="0" name="SetLoadItemResult" nillable="true" type="q23:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundTruck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carlicense" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutboundTruckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Truck" minOccurs="0" name="GetOutboundTruckResult" nillable="true" type="q24:TruckOrderDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

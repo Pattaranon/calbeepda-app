@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd2" filename="MasterService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd3" filename="MasterService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd0" filename="MasterService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd1" filename="MasterService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://43.229.78.24/WMSService/MasterService.svc?disco" filename="MasterService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://43.229.78.24/WMSService/MasterService.svc?wsdl" filename="MasterService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

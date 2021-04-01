@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="MasterService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/MasterService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMasterService_GetWarehouses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarehouses" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetWarehouses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarehousesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetWarehousesUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarehousesUser" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetWarehousesUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarehousesUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocation" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocations" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetWarehousesUserLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarehousesUserLocation" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetWarehousesUserLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarehousesUserLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItem" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetItemUoms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemUoms" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetItemUoms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemUomsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatus" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetStatusComboboxItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusComboboxItem" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetStatusComboboxItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusComboboxItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMasterService">
+    <wsdl:operation name="GetWarehouses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetWarehouses" message="tns:IMasterService_GetWarehouses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetWarehousesResponse" message="tns:IMasterService_GetWarehouses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehousesUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetWarehousesUser" message="tns:IMasterService_GetWarehousesUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetWarehousesUserResponse" message="tns:IMasterService_GetWarehousesUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetLocation" message="tns:IMasterService_GetLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetLocationResponse" message="tns:IMasterService_GetLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetLocations" message="tns:IMasterService_GetLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetLocationsResponse" message="tns:IMasterService_GetLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehousesUserLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetWarehousesUserLocation" message="tns:IMasterService_GetWarehousesUserLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetWarehousesUserLocationResponse" message="tns:IMasterService_GetWarehousesUserLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetItem" message="tns:IMasterService_GetItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetItemResponse" message="tns:IMasterService_GetItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUoms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetItemUoms" message="tns:IMasterService_GetItemUoms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetItemUomsResponse" message="tns:IMasterService_GetItemUoms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetStatus" message="tns:IMasterService_GetStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetStatusResponse" message="tns:IMasterService_GetStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusComboboxItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetStatusComboboxItem" message="tns:IMasterService_GetStatusComboboxItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetStatusComboboxItemResponse" message="tns:IMasterService_GetStatusComboboxItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMasterService" type="tns:IMasterService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWarehouses">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetWarehouses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehousesUser">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetWarehousesUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehousesUserLocation">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetWarehousesUserLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUoms">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetItemUoms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusComboboxItem">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetStatusComboboxItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MasterService">
+    <wsdl:port name="BasicHttpBinding_IMasterService" binding="tns:BasicHttpBinding_IMasterService">
+      <soap:address location="http://43.229.78.24/WMSService/MasterService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

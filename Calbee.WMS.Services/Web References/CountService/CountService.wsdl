@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="CountService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/CountService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/CountService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/CountService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Count" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/CountService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/CountService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/CountService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICountService_GetCounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounts" />
+  </wsdl:message>
+  <wsdl:message name="ICountService_GetCounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountService_GetCountNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountNumbers" />
+  </wsdl:message>
+  <wsdl:message name="ICountService_GetCountNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountService_GetCountDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICountService_GetCountDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountService_SetCountItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCountItem" />
+  </wsdl:message>
+  <wsdl:message name="ICountService_SetCountItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCountItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICountService">
+    <wsdl:operation name="GetCounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountService/GetCounts" message="tns:ICountService_GetCounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountService/GetCountsResponse" message="tns:ICountService_GetCounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountService/GetCountNumbers" message="tns:ICountService_GetCountNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountService/GetCountNumbersResponse" message="tns:ICountService_GetCountNumbers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountService/GetCountDetail" message="tns:ICountService_GetCountDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountService/GetCountDetailResponse" message="tns:ICountService_GetCountDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCountItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountService/SetCountItem" message="tns:ICountService_SetCountItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountService/SetCountItemResponse" message="tns:ICountService_SetCountItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICountService" type="tns:ICountService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCounts">
+      <soap:operation soapAction="http://tempuri.org/ICountService/GetCounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountNumbers">
+      <soap:operation soapAction="http://tempuri.org/ICountService/GetCountNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountDetail">
+      <soap:operation soapAction="http://tempuri.org/ICountService/GetCountDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCountItem">
+      <soap:operation soapAction="http://tempuri.org/ICountService/SetCountItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CountService">
+    <wsdl:port name="BasicHttpBinding_ICountService" binding="tns:BasicHttpBinding_ICountService">
+      <soap:address location="http://43.229.78.24/WMSService/CountService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

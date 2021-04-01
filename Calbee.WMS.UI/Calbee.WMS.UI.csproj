@@ -1,0 +1,298 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84CC0822-71F0-4324-B4C8-C77A29DBCC3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Calbee.WMS.UI</RootNamespace>
+    <AssemblyName>Calbee.WMS.UI</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>Calbee.WMS.UI</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\frmConfigWebService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication\frmConfigWebService.Designer.cs">
+      <DependentUpon>frmConfigWebService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsBases\frmBaseForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsBases\frmBaseForms.Designer.cs">
+      <DependentUpon>frmBaseForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsBases\frmBaseTitleHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsBases\frmBaseTitleHeader.Designer.cs">
+      <DependentUpon>frmBaseTitleHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangeLocation\frmChangeLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeLocation\frmChangeLocation.Designer.cs">
+      <DependentUpon>frmChangeLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangeStatus\frmChangeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeStatus\frmChangeStatus.Designer.cs">
+      <DependentUpon>frmChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Count\frmCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Count\frmCount.Designer.cs">
+      <DependentUpon>frmCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inventory\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Load\frmLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Load\frmLoad.Designer.cs">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pickup\frmPickItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pickup\frmPickItem.Designer.cs">
+      <DependentUpon>frmPickItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pickup\frmPickup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pickup\frmPickup.Designer.cs">
+      <DependentUpon>frmPickup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pickup\frmShortPickItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pickup\frmShortPickItem.Designer.cs">
+      <DependentUpon>frmShortPickItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Putaway\frmPutaway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Putaway\frmPutaway.Designer.cs">
+      <DependentUpon>frmPutaway.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Putaway\frmPutawayStaging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Putaway\frmPutawayStaging.Designer.cs">
+      <DependentUpon>frmPutawayStaging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Receive\frmReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Receive\frmReceive.Designer.cs">
+      <DependentUpon>frmReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Receive\frmReceiveRawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Receive\frmReceiveRawMaterial.Designer.cs">
+      <DependentUpon>frmReceiveRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu\frmInventoryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu\frmInventoryMenu.Designer.cs">
+      <DependentUpon>frmInventoryMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu\frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu\frmSelectWAF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu\frmSelectWAF.Designer.cs">
+      <DependentUpon>frmSelectWAF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Authentication\frmConfigWebService.resx">
+      <DependentUpon>frmConfigWebService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsBases\frmBaseForms.resx">
+      <DependentUpon>frmBaseForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsBases\frmBaseTitleHeader.resx">
+      <DependentUpon>frmBaseTitleHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangeLocation\frmChangeLocation.resx">
+      <DependentUpon>frmChangeLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangeStatus\frmChangeStatus.resx">
+      <DependentUpon>frmChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Count\frmCount.resx">
+      <DependentUpon>frmCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inventory\frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Load\frmLoad.resx">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pickup\frmPickItem.resx">
+      <DependentUpon>frmPickItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pickup\frmPickup.resx">
+      <DependentUpon>frmPickup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pickup\frmShortPickItem.resx">
+      <DependentUpon>frmShortPickItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Putaway\frmPutaway.resx">
+      <DependentUpon>frmPutaway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Putaway\frmPutawayStaging.resx">
+      <DependentUpon>frmPutawayStaging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Receive\frmReceive.resx">
+      <DependentUpon>frmReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Receive\frmReceiveRawMaterial.resx">
+      <DependentUpon>frmReceiveRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\frmInventoryMenu.resx">
+      <DependentUpon>frmInventoryMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\frmSelectWAF.resx">
+      <DependentUpon>frmSelectWAF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AutoCompleteTextBox.resx">
+      <DependentUpon>AutoCompleteTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AutoCompleteTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AutoCompleteTextBox.Designer.cs">
+      <DependentUpon>AutoCompleteTextBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calbee.Infra.Common\Calbee.Infra.Common.csproj">
+      <Project>{F9B8E71D-DEF8-4F73-A799-C3BF95996B74}</Project>
+      <Name>Calbee.Infra.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Calbee.Infra.Compression\Calbee.Infra.Compression.csproj">
+      <Project>{39DAD857-256E-49EC-87AF-A8D9FA1E8B6D}</Project>
+      <Name>Calbee.Infra.Compression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Calbee.Infra.Helper\Calbee.Infra.Helper.csproj">
+      <Project>{28FC2D11-E11C-4879-9CB7-17765DA72C76}</Project>
+      <Name>Calbee.Infra.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Calbee.Infra.Logging\Calbee.Infra.Logging.csproj">
+      <Project>{5F17ED35-770F-4274-8762-500FF5273306}</Project>
+      <Name>Calbee.Infra.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Calbee.Infra.Shared\Calbee.Infra.Shared.csproj">
+      <Project>{B00B8C8E-4397-48B9-A2E3-3EE41836380B}</Project>
+      <Name>Calbee.Infra.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Calbee.WMS.Entities\Calbee.WMS.Entities.csproj">
+      <Project>{86309F6B-A06B-4A01-A82A-C479A597208E}</Project>
+      <Name>Calbee.WMS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Calbee.WMS.Services\Calbee.WMS.Services.csproj">
+      <Project>{3BBC1F19-25E1-449B-A61C-1E585BFD31AA}</Project>
+      <Name>Calbee.WMS.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

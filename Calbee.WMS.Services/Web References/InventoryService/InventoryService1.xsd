@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inventory" />
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" />
+  <xs:element name="GetInventory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inventory" minOccurs="0" name="GetInventoryResult" nillable="true" type="q1:Inventory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventorys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lot_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventorysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inventory" minOccurs="0" name="GetInventorysResult" nillable="true" type="q2:ArrayOfInventory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryFilters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryFiltersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inventory" minOccurs="0" name="GetInventoryFiltersResult" nillable="true" type="q3:ArrayOfInventory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryLpns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryLpnsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetInventoryLpnsResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryItemNumbers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryItemNumbersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetInventoryItemNumbersResult" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryLotNumbers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryLotNumbersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetInventoryLotNumbersResult" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryExpiryDates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryExpiryDatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetInventoryExpiryDatesResult" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryStatuss">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lpn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInventoryStatussResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetInventoryStatussResult" nillable="true" type="q8:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuggestLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="warehouse_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location_code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuggestLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSuggestLocationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPickupPutawayItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inventory" minOccurs="0" name="item" nillable="true" type="q9:InventoryItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPickupPutawayItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" minOccurs="0" name="SetPickupPutawayItemResult" nillable="true" type="q10:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

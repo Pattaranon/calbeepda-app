@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inbound" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inbound" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="InboundMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ExpectedDeliveryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InboundOrderMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="InboundOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="WarehouseId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InboundMaster" nillable="true" type="tns:InboundMaster" />
+  <xs:complexType name="ArrayOfInboundMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InboundMaster" nillable="true" type="tns:InboundMaster" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInboundMaster" nillable="true" type="tns:ArrayOfInboundMaster" />
+  <xs:complexType name="ArrayOfInboundDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InboundDetail" nillable="true" type="tns:InboundDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInboundDetail" nillable="true" type="tns:ArrayOfInboundDetail" />
+  <xs:complexType name="InboundDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlternateItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrossRefUom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DaysToExpire" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DefaultItemStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultLPN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpiryDateControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InboundLpnDetails" nillable="true" type="tns:ArrayOfInboundLpnDetail" />
+      <xs:element minOccurs="0" name="InboundOrderDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="InboundOrderMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemUomId" type="xs:int" />
+      <xs:element minOccurs="0" name="LineNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LpnControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QuantityOrder" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityReceive" type="xs:double" />
+      <xs:element minOccurs="0" name="SerialControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InboundDetail" nillable="true" type="tns:InboundDetail" />
+  <xs:complexType name="ArrayOfInboundLpnDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InboundLpnDetail" nillable="true" type="tns:InboundLpnDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInboundLpnDetail" nillable="true" type="tns:ArrayOfInboundLpnDetail" />
+  <xs:complexType name="InboundLpnDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoxNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InboundLpnDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="InboundOrderDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LpnStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductionDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityOrder" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityReceive" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityReceived" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="ReceiveBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InboundLpnDetail" nillable="true" type="tns:InboundLpnDetail" />
+  <xs:complexType name="ArrayOfReceiptHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReceiptHeader" nillable="true" type="tns:ReceiptHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReceiptHeader" nillable="true" type="tns:ArrayOfReceiptHeader" />
+  <xs:complexType name="ReceiptHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InboundOrderMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiptHeaderId" type="xs:long" />
+      <xs:element minOccurs="0" name="ReceiptNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiptStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptHeader" nillable="true" type="tns:ReceiptHeader" />
+  <xs:complexType name="ArrayOfReceiptDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReceiptDetail" nillable="true" type="tns:ReceiptDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReceiptDetail" nillable="true" type="tns:ArrayOfReceiptDetail" />
+  <xs:complexType name="ReceiptDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InboundOrderDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemUomId" type="xs:int" />
+      <xs:element minOccurs="0" name="Location_Received" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentLpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityReceived" type="xs:double" />
+      <xs:element minOccurs="0" name="ReceiptDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="ReceiptHeaderId" type="xs:long" />
+      <xs:element minOccurs="0" name="Receipt_Item_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptDetail" nillable="true" type="tns:ReceiptDetail" />
+  <xs:complexType name="ReceiptPalletSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PalletPlan" type="xs:double" />
+      <xs:element minOccurs="0" name="PalletReceived" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalBoxReceived" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptPalletSummary" nillable="true" type="tns:ReceiptPalletSummary" />
+  <xs:complexType name="ReceiptSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QuantityOrder" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityReceived" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptSummary" nillable="true" type="tns:ReceiptSummary" />
+  <xs:complexType name="ReceiveItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Device" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LPN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentLPN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlantCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityReceive" type="xs:double" />
+      <xs:element minOccurs="0" name="ReceiveBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiveItem" nillable="true" type="tns:ReceiveItem" />
+</xs:schema>

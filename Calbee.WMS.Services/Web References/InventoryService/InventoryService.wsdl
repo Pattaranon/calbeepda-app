@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="InventoryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inventory" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InventoryService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInventoryService_GetInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventory" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventorys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventorys" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventorys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventorysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryFilters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryFilters" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryFilters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryFiltersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryLpns_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryLpns" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryLpns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryLpnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryItemNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemNumbers" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryItemNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryLotNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryLotNumbers" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryLotNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryLotNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryExpiryDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryExpiryDates" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryExpiryDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryExpiryDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryStatuss_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryStatuss" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetInventoryStatuss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryStatussResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetSuggestLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuggestLocation" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetSuggestLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuggestLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_SetPickupPutawayItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPickupPutawayItem" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_SetPickupPutawayItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPickupPutawayItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInventoryService">
+    <wsdl:operation name="GetInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventory" message="tns:IInventoryService_GetInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryResponse" message="tns:IInventoryService_GetInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventorys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventorys" message="tns:IInventoryService_GetInventorys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventorysResponse" message="tns:IInventoryService_GetInventorys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryFilters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryFilters" message="tns:IInventoryService_GetInventoryFilters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryFiltersResponse" message="tns:IInventoryService_GetInventoryFilters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryLpns">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryLpns" message="tns:IInventoryService_GetInventoryLpns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryLpnsResponse" message="tns:IInventoryService_GetInventoryLpns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryItemNumbers" message="tns:IInventoryService_GetInventoryItemNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryItemNumbersResponse" message="tns:IInventoryService_GetInventoryItemNumbers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryLotNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryLotNumbers" message="tns:IInventoryService_GetInventoryLotNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryLotNumbersResponse" message="tns:IInventoryService_GetInventoryLotNumbers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryExpiryDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryExpiryDates" message="tns:IInventoryService_GetInventoryExpiryDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryExpiryDatesResponse" message="tns:IInventoryService_GetInventoryExpiryDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStatuss">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryStatuss" message="tns:IInventoryService_GetInventoryStatuss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetInventoryStatussResponse" message="tns:IInventoryService_GetInventoryStatuss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuggestLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetSuggestLocation" message="tns:IInventoryService_GetSuggestLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetSuggestLocationResponse" message="tns:IInventoryService_GetSuggestLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPickupPutawayItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/SetPickupPutawayItem" message="tns:IInventoryService_SetPickupPutawayItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/SetPickupPutawayItemResponse" message="tns:IInventoryService_SetPickupPutawayItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInventoryService" type="tns:IInventoryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInventory">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventorys">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventorys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryFilters">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventoryFilters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryLpns">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventoryLpns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemNumbers">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventoryItemNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryLotNumbers">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventoryLotNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryExpiryDates">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventoryExpiryDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStatuss">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetInventoryStatuss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuggestLocation">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetSuggestLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPickupPutawayItem">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/SetPickupPutawayItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventoryService">
+    <wsdl:port name="BasicHttpBinding_IInventoryService" binding="tns:BasicHttpBinding_IInventoryService">
+      <soap:address location="http://43.229.78.24/WMSService/InventoryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

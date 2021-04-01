@@ -1,0 +1,585 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using Calbee.Infra.Helper.Objects;
+using Calbee.Infra.Helper.Message;
+using Calbee.Infra.Shared;
+
+namespace Calbee.WMS.UI.Forms.Receive
+{
+    public partial class frmReceive : Form
+    {
+        #region Member
+
+        System.Globalization.CultureInfo _cultureEnInfo = new System.Globalization.CultureInfo("en-US");
+        public string orderType { get; set; }
+        private static AppContext appContext = AppContext.Instance;
+        public AppContext AppContext
+        {
+            get { return appContext; }
+        }
+
+        #endregion
+
+        #region Constructor
+
+        public frmReceive()
+        {
+            InitializeComponent();
+        }
+
+        #endregion
+
+        #region Method
+
+        private void receiveNumberBinding(string orderNumber, ref string errorMsg)
+        {
+            try
+            {
+                List<Calbee.WMS.Services.InboundService.ReceiptHeader> _listReceiveNumber = new List<Calbee.WMS.Services.InboundService.ReceiptHeader>();
+                Calbee.WMS.Services.InboundService.ReceiptHeader _master;
+                _listReceiveNumber = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.GetInboundReceiptHeader(orderNumber).ToList();
+                if (_listReceiveNumber != null)
+                {
+                    if (_listReceiveNumber.Count() == 1)
+                    {
+                        // Default value ReceiveNumber
+                        orderType = _listReceiveNumber.FirstOrDefault().OrderType;
+                        ComboBoxBinding.BindEntityToCombobox(_listReceiveNumber, this.cmbReceiveNumber, "ReceiptNumber", "ReceiptNumber", "");
+                    }
+                    else if (_listReceiveNumber.Count() > 1)
+                    {
+                        // Binding dropdowm
+                        orderType = _listReceiveNumber.FirstOrDefault().OrderType;
+                        _master = new Calbee.WMS.Services.InboundService.ReceiptHeader();
+                        _master.ReceiptNumber = "Select";
+                        _listReceiveNumber.Insert(0, _master);
+                        ComboBoxBinding.BindEntityToCombobox(_listReceiveNumber, this.cmbReceiveNumber, "ReceiptNumber", "ReceiptNumber", "");
+                    }
+                    else
+                    {
+                        orderType = string.Empty;
+                        this.cmbReceiveNumber.DataSource = null;
+                    }
+                }
+                else
+                {
+                    this.cmbReceiveNumber.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null)
+                {
+                    MsgBox.DialogError(ex.InnerException.Message.ToString());
+                }
+                else
+                {
+                    MsgBox.DialogError(ex.GetBaseException().ToString());
+                }
+                errorMsg = "ERR";
+                return;
+            }
+        }
+        private void ItemStatusBinding()
+        {
+            try
+            {
+                List<Calbee.WMS.Services.MasterService.tbc_Status> _listItemStatus = new List<Calbee.WMS.Services.MasterService.tbc_Status>();
+                Calbee.WMS.Services.MasterService.tbc_Status _master;
+                _listItemStatus = Calbee.WMS.Services.Masters.MasterServiceProxy.WS.GetStatus(Calbee.Infra.Common.Constants.WConstants.reciveItemStatusType).ToList();
+                if (_listItemStatus != null)
+                {
+                    if (_listItemStatus.Count() == 1)
+                    {
+                        // Default value ReceiveNumber
+                        ComboBoxBinding.BindEntityToCombobox(_listItemStatus, this.cmbItemStatus, "StatusName", "StatusName", "");
+                    }
+                    else if (_listItemStatus.Count() > 1)
+                    {
+                        // Binding dropdowm
+                        _master = new Calbee.WMS.Services.MasterService.tbc_Status();
+                        _master.StatusName = "Select";
+                        _listItemStatus.Insert(0, _master);
+                        ComboBoxBinding.BindEntityToCombobox(_listItemStatus, this.cmbItemStatus, "StatusName", "StatusName", "");
+                    }
+                    else
+                    {
+                        this.cmbItemStatus.DataSource = null;
+                    }
+                }
+                else
+                {
+                    this.cmbItemStatus.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null)
+                {
+                    MsgBox.DialogError(ex.InnerException.Message.ToString());
+                }
+                else
+                {
+                    MsgBox.DialogError(ex.GetBaseException().ToString());
+                }
+            }
+        }
+        private void RefreshControl()
+        {
+            this.cmbReceiveNumber.DataSource = null;
+            this.cmbReceiveNumber.SelectedValue = string.Empty;
+            this.cmbReceiveNumber.Enabled = true;
+            this.txtReceiveLocation.Text = string.Empty;
+            this.txtReceiveLocation.Enabled = true;
+            this.txtReceiveLPN.Text = string.Empty;
+            this.txtReceiveLPN.Enabled = true;
+            this.txtItemNumber.Text = string.Empty;
+            this.txtItemNumber.Enabled = true;
+            this.txtLotNumber.Text = string.Empty;
+            this.txtLotNumber.Enabled = true;
+            this.dtpExpiryDate.Value = DateTime.Now;
+            this.dtpExpiryDate.Enabled = true;
+            this.txtQuantity.Text = string.Empty;
+            this.txtQuantity.Enabled = true;
+            this.cmbUOM.DataSource = null;
+            this.cmbUOM.SelectedValue = string.Empty;
+            this.cmbItemStatus.SelectedIndex = 0;
+            this.dtpReceiveDate.Value = DateTime.Now;
+            this.dtpReceiveDate.Enabled = true;
+            this.lblResultCounter.Text = "0/0";
+        }
+        private void gotoItemNumber()
+        {
+            this.txtItemNumber.Text = string.Empty;
+            this.txtItemNumber.Enabled = true;
+            this.txtLotNumber.Text = string.Empty;
+            this.txtLotNumber.Enabled = true;
+            this.dtpExpiryDate.Value = DateTime.Now;
+            this.dtpExpiryDate.Enabled = true;
+            this.txtQuantity.Text = string.Empty;
+            this.txtQuantity.Enabled = true;
+            this.cmbUOM.DataSource = null;
+            this.cmbUOM.SelectedValue = string.Empty;
+        }
+
+        #endregion
+
+        #region Event
+
+        private void frmReceive_Load(object sender, EventArgs e)
+        {
+            this.txtOrderNumber.Focus();
+            this.txtOrderNumber.SelectAll();
+            ItemStatusBinding();
+            this.lblResultCounter.Text = "0/0";
+        }
+
+        private void txtOrderNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(this.txtOrderNumber.Text.Trim()))
+                    {
+                        MsgBox.DialogWarning("Please scan order number");
+                        return;
+                    }
+                    else
+                    {
+                        string msgResult = string.Empty;
+                        // Refresh control
+                        RefreshControl();
+                        // Binding ReceiveNumber
+                        receiveNumberBinding(this.txtOrderNumber.Text.Trim(), ref msgResult);
+                        try
+                        {
+                            if (msgResult.Equals("ERR"))
+                            {
+                                return;
+                            }
+                            // Call service GetLocation.
+                            var locationResult = Calbee.WMS.Services.Masters.MasterServiceProxy.WS.GetLocations(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, string.Empty, string.Empty, Calbee.Infra.Common.Constants.WConstants.receiveLocationType);
+                            if (locationResult != null)
+                            {
+                                if (locationResult.Count() == 1)
+                                {
+                                    if (orderType.ToLower().Contains(Calbee.Infra.Common.Constants.WConstants.orderProductionType))
+                                    {
+                                        // Production
+                                        var counter = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.GetInboundLpnDetails(this.txtOrderNumber.Text.Trim(), string.Empty, string.Empty);
+                                        if (counter != null)
+                                        {
+                                            this.lblResultCounter.Text = counter.Where(q => q.LpnStatus.ToLower() != "new").Count().ToString() + "/" + counter.Count();
+                                        }
+
+                                        // เอาข้อมูลมาใส่ Gridview Production
+                                        dgvReceiveProduction.Visible = true;
+                                        dgvReceiveDetail.Visible = false;
+                                    }
+                                    else
+                                    {
+                                        // เอาข้อมูลมาใส่ Gridview Detail
+                                        dgvReceiveProduction.Visible = false;
+                                        dgvReceiveDetail.Visible = true;
+                                    }
+                                    // Default location in textbox
+                                    this.txtReceiveLocation.Text = locationResult.FirstOrDefault().LocationCode;
+                                    if (locationResult.FirstOrDefault().LpnControlled)
+                                    {
+                                        this.txtReceiveLPN.Focus();
+                                    }
+                                    else
+                                    {
+                                        this.txtItemNumber.Focus();
+                                    }
+                                }
+                                else if (locationResult.Count() > 1)
+                                {
+                                    this.txtReceiveLocation.Focus();
+                                    this.txtReceiveLocation.SelectAll();
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            if (ex.InnerException != null)
+                            {
+                                MsgBox.DialogError(ex.InnerException.Message.ToString());
+                            }
+                            else
+                            {
+                                MsgBox.DialogError(ex.GetBaseException().ToString());
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    if (ex.InnerException != null)
+                    {
+                        MsgBox.DialogError(ex.InnerException.Message.ToString());
+                    }
+                    else
+                    {
+                        MsgBox.DialogError(ex.GetBaseException().ToString());
+                    }
+                }
+            }
+        }
+        private void txtReceiveLocation_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                var locationResult = Calbee.WMS.Services.Masters.MasterServiceProxy.WS.GetLocation(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.txtReceiveLocation.Text.Trim(), string.Empty, string.Empty);
+                if (locationResult != null)
+                {
+                    this.txtReceiveLPN.Enabled = locationResult.LpnControlled;
+                    if (this.txtReceiveLPN.Enabled)
+                    {
+                        // True call service
+                        this.txtReceiveLPN.Focus();
+                        this.txtReceiveLPN.SelectAll();
+                    }
+                    else
+                    {
+                        // False
+                        this.txtItemNumber.Focus();
+                        this.txtItemNumber.SelectAll();
+                    }
+                }
+            }
+        }
+        private void txtReceiveLPN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (orderType.Contains(Calbee.Infra.Common.Constants.WConstants.orderProductionType))
+                {
+                    try
+                    {
+                        // Call service getInboundLpnDetail
+                        var inboundLpnDetailResult = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.GetInboundLpnDetails(this.txtOrderNumber.Text.Trim(), this.txtReceiveLPN.Text.Trim(), string.Empty);
+                        if (inboundLpnDetailResult != null)
+                        {
+                            if (inboundLpnDetailResult.FirstOrDefault().LpnStatus.ToUpper().Trim() == "NEW")
+                            {
+                                // New
+                                this.txtItemNumber.Text = inboundLpnDetailResult.FirstOrDefault().ItemNumber;
+                                this.txtLotNumber.Text = inboundLpnDetailResult.FirstOrDefault().LotNumber;
+                                this.dtpExpiryDate.Value = inboundLpnDetailResult.FirstOrDefault().ExpiryDate.Value;
+                                this.txtQuantity.Text = inboundLpnDetailResult.FirstOrDefault().Quantity.ToString();
+                                ComboBoxBinding.BindEntityToCombobox(AppContext.UOMDDLBinding(inboundLpnDetailResult.FirstOrDefault().ItemNumber), this.cmbUOM, "Uom", "Uom", "");
+                                this.cmbUOM.SelectedValue = inboundLpnDetailResult.FirstOrDefault().Uom;
+                                // Enable control
+                                this.txtItemNumber.Enabled = false;
+                                this.txtLotNumber.Enabled = false;
+                                this.dtpExpiryDate.Enabled = false;
+                            }
+                            else
+                            {
+                                // Other
+                                MsgBox.DialogWarning("This LPN : " + this.txtReceiveLPN.Text.Trim() + " Already received");
+                                return;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        if (ex.InnerException != null)
+                        {
+                            MsgBox.DialogError(ex.InnerException.Message.ToString());
+                        }
+                        else
+                        {
+                            MsgBox.DialogError(ex.GetBaseException().ToString());
+                        }
+                    }
+                }
+                else
+                {
+                    this.txtItemNumber.Focus();
+                    this.txtItemNumber.SelectAll();
+                }
+            }
+        }
+        private void txtItemNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(this.txtItemNumber.Text.Trim()))
+                {
+                    MsgBox.DialogWarning("Please scan item number");
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        // Call service getInboundDetail
+                        this.txtLotNumber.Enabled = true;
+                        if (orderType.Contains(Calbee.Infra.Common.Constants.WConstants.orderProductionType))
+                        {
+                            // Production
+                            var inboundLpnDetailResult = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.GetInboundLpnDetails(this.txtOrderNumber.Text.Trim(), this.txtReceiveLPN.Text.Trim(), string.Empty);
+                            if (inboundLpnDetailResult != null)
+                            {
+                                if (inboundLpnDetailResult.Count() > 0)
+                                {
+                                    this.txtLotNumber.Text = inboundLpnDetailResult.FirstOrDefault().LotNumber;
+                                    this.dtpExpiryDate.Value = inboundLpnDetailResult.FirstOrDefault().ExpiryDate.Value;
+                                    this.txtQuantity.Text = inboundLpnDetailResult.FirstOrDefault().Quantity.ToString();
+                                    ComboBoxBinding.BindEntityToCombobox(AppContext.UOMDDLBinding(inboundLpnDetailResult.FirstOrDefault().ItemNumber), this.cmbUOM, "Uom", "Uom", "");
+                                    this.cmbUOM.SelectedValue = inboundLpnDetailResult.FirstOrDefault().Uom;
+                                }
+                                else if (inboundLpnDetailResult.Count() == 0)
+                                {
+                                    MsgBox.DialogWarning("Not found item number : " + this.txtItemNumber.Text);
+                                    return;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            // Not production
+                            var inboundDetailResult = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.GetInboundDetails(this.txtOrderNumber.Text.Trim(), this.txtReceiveLPN.Text.Trim(), this.txtItemNumber.Text.Trim());
+                            if (inboundDetailResult != null)
+                            {
+                                if (inboundDetailResult.Count() > 0)
+                                {
+                                    if (inboundDetailResult.FirstOrDefault().ExpiryDateControl)
+                                    {
+                                        this.dtpExpiryDate.Value = AppContext.GetDateTimeServer().AddDays(inboundDetailResult.FirstOrDefault().DaysToExpire.Value);
+                                    }
+                                    else
+                                    {
+                                        this.dtpExpiryDate.Enabled = false;
+                                    }
+                                    if (inboundDetailResult.FirstOrDefault().LotControl)
+                                    {
+                                        this.txtLotNumber.Text = AppContext.GetDateTimeServerString(Calbee.Infra.Common.Constants.WConstants.formatDateString);
+                                    }
+                                    else
+                                    {
+                                        this.txtLotNumber.Text = string.Empty;
+                                        this.txtLotNumber.Enabled = false;
+                                    }
+                                    // this.txtQuantity.Text = inboundDetailResult.FirstOrDefault().QuantityOrder.ToString();
+                                    ComboBoxBinding.BindEntityToCombobox(AppContext.UOMDDLBinding(inboundDetailResult.FirstOrDefault().ItemNumber), this.cmbUOM, "Uom", "Uom", "");
+                                    this.cmbUOM.SelectedValue = inboundDetailResult.FirstOrDefault().Uom;
+                                    this.cmbItemStatus.SelectedValue = inboundDetailResult.FirstOrDefault().DefaultItemStatus;
+                                    if (string.IsNullOrEmpty(this.cmbItemStatus.SelectedValue.ToString()))
+                                    {
+                                        this.cmbItemStatus.SelectedIndex = 1;
+                                    }
+                                    this.txtQuantity.Focus();
+                                    this.lblResultCounter.Text = inboundDetailResult.FirstOrDefault().QuantityReceive + "/" + inboundDetailResult.FirstOrDefault().QuantityOrder;
+                                }
+                                else if (inboundDetailResult.Count() == 0)
+                                {
+                                    MsgBox.DialogWarning("Not found item number : " + this.txtItemNumber.Text);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        if (ex.InnerException != null)
+                        {
+                            MsgBox.DialogError(ex.InnerException.Message.ToString());
+                        }
+                        else
+                        {
+                            MsgBox.DialogError(ex.GetBaseException().ToString());
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            // Create receive number
+            if (string.IsNullOrEmpty(this.txtOrderNumber.Text.Trim()))
+            {
+                MsgBox.DialogWarning("Plases scan order number");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    string msgResult = string.Empty;
+                    // Call service GenerateReceiveNumber.
+                    var receiveNumberResult = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.GenerateReceiveNumber(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.txtOrderNumber.Text.Trim(), AppContext.CurrentUser.UserName);
+                    if (receiveNumberResult != null)
+                    {
+                        // Binding ReceiveNumber
+                        receiveNumberBinding(this.txtOrderNumber.Text.Trim(), ref msgResult);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    if (ex.InnerException != null)
+                    {
+                        MsgBox.DialogError(ex.InnerException.Message.ToString());
+                    }
+                    else
+                    {
+                        MsgBox.DialogError(ex.GetBaseException().ToString());
+                    }
+                }
+            }
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            MainMenu.frmMainMenu fMain = new Calbee.WMS.UI.MainMenu.frmMainMenu();
+            fMain.Show();
+            this.Close();
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Calbee.WMS.Services.InboundService.ReceiveItem receive = new Calbee.WMS.Services.InboundService.ReceiveItem();
+                receive.Device = AppContext.DeviceName;
+                receive.ExpiryDate = this.dtpExpiryDate.Enabled == false ? string.Empty : this.dtpExpiryDate.Value.ToString(Calbee.Infra.Common.Constants.WConstants.formatDateString);
+                receive.ItemName = string.Empty;
+                receive.ItemNumber = this.txtItemNumber.Text;
+                receive.LPN = this.txtReceiveLPN.Text;
+                receive.Location = this.txtReceiveLocation.Text.Trim();
+                receive.LotNumber = this.txtLotNumber.Text.Trim();
+                receive.OrderNumber = this.txtOrderNumber.Text.Trim();
+                receive.ParentLPN = string.Empty;
+                receive.PlantCode = string.Empty;
+                receive.QuantityReceive = Convert.ToDouble(this.txtQuantity.Text.Trim());
+                receive.ReceiveBy = Calbee.Infra.Common.Constants.WConstants.userName;
+                DateTime dateEng = Convert.ToDateTime(this.dtpReceiveDate.Value, _cultureEnInfo);
+                receive.ReceiveDate = dateEng.ToString(Calbee.Infra.Common.Constants.WConstants.formatDateString, _cultureEnInfo);
+                receive.ReceiveNumber = string.Empty;
+                receive.SerialNumber = string.Empty;
+                receive.Status = this.cmbItemStatus.SelectedValue.ToString();
+                receive.Uom = this.cmbUOM.SelectedValue.ToString();
+                receive.WarehouseCode = Calbee.Infra.Common.Constants.WConstants.wareHouseDDL;
+                Calbee.WMS.Services.InboundService.Response saveRecevie = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.SetReceiveItem(receive);
+                if (saveRecevie != null)
+                {
+                    if (saveRecevie.StatusCode == 0)
+                    {
+                        // Success = StatusCode 0
+                        MsgBox.DialogInfomation(saveRecevie.Message);
+                        gotoItemNumber();
+                    }
+                    else
+                    {
+                        MsgBox.DialogWarning(saveRecevie.Message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null)
+                {
+                    MsgBox.DialogError(ex.InnerException.Message.ToString());
+                }
+                else
+                {
+                    MsgBox.DialogError(ex.GetBaseException().ToString());
+                }
+            }
+        }
+        private void brnRefresh_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(orderType))
+            {
+                MsgBox.DialogWarning("Please scan order number");
+                return;
+            }
+            else
+            {
+                if (orderType.Contains(Calbee.Infra.Common.Constants.WConstants.orderProductionType))
+                {
+                    // เอาข้อมูลมาใส่ Gridview Production
+                    dgvReceiveProduction.Visible = true;
+                    dgvReceiveDetail.Visible = false;
+                }
+                else
+                {
+                    // Not production
+                    // เอาข้อมูลมาใส่ Gridview Detail
+                    dgvReceiveProduction.Visible = false;
+                    dgvReceiveDetail.Visible = true;
+                }
+            }
+        }
+
+        #endregion
+
+        private void tabReceive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabReceive.SelectedIndex == 1)
+            {
+                if (!string.IsNullOrEmpty(orderType))
+                {
+                    if (orderType.Contains(Calbee.Infra.Common.Constants.WConstants.orderProductionType))
+                    {
+                        dgvReceiveProduction.Visible = true;
+                        dgvReceiveDetail.Visible = false;
+                    }
+                    else
+                    {
+                        dgvReceiveProduction.Visible = false;
+                        dgvReceiveDetail.Visible = true;
+                    }
+                }
+            }
+        }
+    }
+}

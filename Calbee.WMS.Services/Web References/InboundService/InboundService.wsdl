@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="InboundService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InboundService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InboundService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InboundService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Inbound" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InboundService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Common" />
+      <xsd:import schemaLocation="http://43.229.78.24/WMSService/InboundService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Responses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInboundService_GetInboundMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundMaster" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundMasters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundMasters" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundMasters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundMastersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundLpnDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundLpnDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundLpnDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundLpnDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundReceiptHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundReceiptHeader" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundReceiptHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundReceiptHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundReceiptDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundReceiptDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundReceiptDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundReceiptDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GenerateReceiveNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReceiveNumber" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GenerateReceiveNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReceiveNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetReceiptSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceiptSummary" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetReceiptSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceiptSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundReceiptDetailSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundReceiptDetailSummary" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_GetInboundReceiptDetailSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundReceiptDetailSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_SetReceiveItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetReceiveItem" />
+  </wsdl:message>
+  <wsdl:message name="IInboundService_SetReceiveItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetReceiveItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInboundService">
+    <wsdl:operation name="GetInboundMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetInboundMaster" message="tns:IInboundService_GetInboundMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetInboundMasterResponse" message="tns:IInboundService_GetInboundMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundMasters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetInboundMasters" message="tns:IInboundService_GetInboundMasters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetInboundMastersResponse" message="tns:IInboundService_GetInboundMasters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetInboundDetails" message="tns:IInboundService_GetInboundDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetInboundDetailsResponse" message="tns:IInboundService_GetInboundDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundLpnDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetInboundLpnDetails" message="tns:IInboundService_GetInboundLpnDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetInboundLpnDetailsResponse" message="tns:IInboundService_GetInboundLpnDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundReceiptHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetInboundReceiptHeader" message="tns:IInboundService_GetInboundReceiptHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetInboundReceiptHeaderResponse" message="tns:IInboundService_GetInboundReceiptHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundReceiptDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetInboundReceiptDetails" message="tns:IInboundService_GetInboundReceiptDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetInboundReceiptDetailsResponse" message="tns:IInboundService_GetInboundReceiptDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReceiveNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GenerateReceiveNumber" message="tns:IInboundService_GenerateReceiveNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GenerateReceiveNumberResponse" message="tns:IInboundService_GenerateReceiveNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetReceiptSummary" message="tns:IInboundService_GetReceiptSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetReceiptSummaryResponse" message="tns:IInboundService_GetReceiptSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundReceiptDetailSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/GetInboundReceiptDetailSummary" message="tns:IInboundService_GetInboundReceiptDetailSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/GetInboundReceiptDetailSummaryResponse" message="tns:IInboundService_GetInboundReceiptDetailSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetReceiveItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInboundService/SetReceiveItem" message="tns:IInboundService_SetReceiveItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInboundService/SetReceiveItemResponse" message="tns:IInboundService_SetReceiveItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInboundService" type="tns:IInboundService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInboundMaster">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetInboundMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundMasters">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetInboundMasters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundDetails">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetInboundDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundLpnDetails">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetInboundLpnDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundReceiptHeader">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetInboundReceiptHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundReceiptDetails">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetInboundReceiptDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReceiveNumber">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GenerateReceiveNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptSummary">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetReceiptSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundReceiptDetailSummary">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/GetInboundReceiptDetailSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReceiveItem">
+      <soap:operation soapAction="http://tempuri.org/IInboundService/SetReceiveItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InboundService">
+    <wsdl:port name="BasicHttpBinding_IInboundService" binding="tns:BasicHttpBinding_IInboundService">
+      <soap:address location="http://43.229.78.24/WMSService/InboundService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

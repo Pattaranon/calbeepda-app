@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Outbound" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OutboundMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryDatePlan" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpectedDeliveryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoadingDatePlan" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutboundOrderMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="OutboundOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickListNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickListStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipDatePlan" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WarehouseId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutboundMaster" nillable="true" type="tns:OutboundMaster" />
+  <xs:complexType name="ArrayOfOutboundMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutboundMaster" nillable="true" type="tns:OutboundMaster" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutboundMaster" nillable="true" type="tns:ArrayOfOutboundMaster" />
+  <xs:complexType name="ArrayOfOutboundDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutboundDetail" nillable="true" type="tns:OutboundDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutboundDetail" nillable="true" type="tns:ArrayOfOutboundDetail" />
+  <xs:complexType name="OutboundDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefaultExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DefaultItemStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultLPN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultLotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultSerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemUomId" type="xs:int" />
+      <xs:element minOccurs="0" name="LineNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutboundOrderDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="OutboundOrderMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="QuantityLoad" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityOrder" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityPack" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityPick" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityShip" type="xs:double" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutboundDetail" nillable="true" type="tns:OutboundDetail" />
+  <xs:complexType name="OutboundPickMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpectedDeliveryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutboundOrderMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="OutboundOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutboundPickMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="PickListNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickListStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutboundPickMaster" nillable="true" type="tns:OutboundPickMaster" />
+  <xs:complexType name="ArrayOfOutboundPickMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutboundPickMaster" nillable="true" type="tns:OutboundPickMaster" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutboundPickMaster" nillable="true" type="tns:ArrayOfOutboundPickMaster" />
+  <xs:complexType name="OutboundPickDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlternateItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrossRefUom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultItemStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpiryDateControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationId" type="xs:int" />
+      <xs:element minOccurs="0" name="LocationPlan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LpnControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OutboundOrderDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="OutboundPickDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="OutboundPickMasterId" type="xs:long" />
+      <xs:element minOccurs="0" name="ParentLpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickLocationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PickSequence" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PickStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickToLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickToLpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickToParentLpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityLoad" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityPack" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityPick" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityPlan" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityShip" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityStage" type="xs:double" />
+      <xs:element minOccurs="0" name="RemainQuantity" type="xs:double" />
+      <xs:element minOccurs="0" name="SerialControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StagingLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutboundPickDetail" nillable="true" type="tns:OutboundPickDetail" />
+  <xs:complexType name="ArrayOfOutboundPickDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutboundPickDetail" nillable="true" type="tns:OutboundPickDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutboundPickDetail" nillable="true" type="tns:ArrayOfOutboundPickDetail" />
+  <xs:complexType name="PickItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarLicense" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompletedPalletQty" type="xs:double" />
+      <xs:element minOccurs="0" name="ContainerNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Device" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDateControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentLpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PickStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickingListNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanPalletQty" type="xs:double" />
+      <xs:element minOccurs="0" name="PlantCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityLoad" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityPick" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityPlan" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantityStage" type="xs:double" />
+      <xs:element minOccurs="0" name="SerialControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToLpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToParentLpn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PickItem" nillable="true" type="tns:PickItem" />
+</xs:schema>
