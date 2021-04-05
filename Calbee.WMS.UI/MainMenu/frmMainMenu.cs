@@ -143,7 +143,7 @@ namespace Calbee.WMS.UI.MainMenu
         private void btnCountMenu_Click(object sender, EventArgs e)
         {
             // เมนูงานนับ
-            using (Forms.Count.frmCount fCount = new Calbee.WMS.UI.Forms.Count.frmCount())
+            using (MainMenu.frmCountMenu fCount = new frmCountMenu())
             {
                 fCount.ShowDialog();
             }

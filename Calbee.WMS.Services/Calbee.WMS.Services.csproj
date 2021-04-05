@@ -60,6 +60,7 @@
     <Compile Include="Authorization\AuthorizeServiceProxy.cs" />
     <Compile Include="Core\CoreServiceProxy.cs" />
     <Compile Include="Core\DownloadCAB.cs" />
+    <Compile Include="Count\CountLocationServiceProxy.cs" />
     <Compile Include="Count\CountServiceProxy.cs" />
     <Compile Include="Inbound\InboundServiceProxy.cs" />
     <Compile Include="Inventory\InventoryServiceProxy.cs" />
@@ -73,6 +74,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\CoreService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CountLocationService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -124,6 +130,19 @@
       <UrlBehavior>Static</UrlBehavior>
       <RelPath>Web References\CoreService\</RelPath>
       <UpdateFromURL>http://43.229.78.24/WMSService/coreservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://43.229.78.24/wmsservice/CountLocationService.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\CountLocationService\</RelPath>
+      <UpdateFromURL>http://43.229.78.24/wmsservice/CountLocationService.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -377,6 +396,20 @@
     <None Include="Web References\OutboundService\OutboundService5.xsd" />
     <None Include="Web References\OutboundService\TruckOrderDetail.datasource">
       <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CountLocationService\CountLocationService.disco" />
+    <None Include="Web References\CountLocationService\CountLocationService.wsdl" />
+    <None Include="Web References\CountLocationService\CountLocationService.xsd" />
+    <None Include="Web References\CountLocationService\CountLocationService0.xsd" />
+    <None Include="Web References\CountLocationService\CountLocationService1.xsd" />
+    <None Include="Web References\CountLocationService\CountLocationService2.xsd" />
+    <None Include="Web References\CountLocationService\CountLocationService3.xsd" />
+    <None Include="Web References\CountLocationService\CountLocationService4.xsd" />
+    <None Include="Web References\CountLocationService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

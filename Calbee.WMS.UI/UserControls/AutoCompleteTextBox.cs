@@ -62,8 +62,6 @@ namespace Calbee.WMS.UI.UserControls
         {
             comboBoxItems = items;
 
-            //Array.Sort(comboBoxItems);
-
             innerComboBox.Items.Clear();
 
             for (int i = 0; i < comboBoxItems.Length; i++)

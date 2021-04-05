@@ -75,19 +75,8 @@ namespace Calbee.WMS.UI.Authentication
             Calbee.WMS.Services.Masters.MasterServiceProxy.IPAddress = ipConfig;
             Calbee.WMS.Services.Outbound.OutboundServiceProxy.IPAddress = ipConfig;
             Calbee.WMS.Services.Count.CountServiceProxy.IPAddress = ipConfig;
+            Calbee.WMS.Services.Count.CountLocationServiceProxy.IPAddress = ipConfig;
             Calbee.WMS.Services.ServiceMode.Mode.IPAddress = ipConfig;
-
-
-            /*
-            Calbee.WMS.Services.Authorization.AuthorizeServiceProxy.IPAddress = AppContext.ReadConfig();
-            Calbee.WMS.Services.Core.CoreServiceProxy.IPAddress = AppContext.ReadConfig();
-            Calbee.WMS.Services.Inbound.InboundServiceProxy.IPAddress = AppContext.ReadConfig();
-            Calbee.WMS.Services.Inventory.InventoryServiceProxy.IPAddress = AppContext.ReadConfig();
-            Calbee.WMS.Services.Masters.MasterServiceProxy.IPAddress = AppContext.ReadConfig();
-            Calbee.WMS.Services.Outbound.OutboundServiceProxy.IPAddress = AppContext.ReadConfig();
-            Calbee.WMS.Services.Count.CountServiceProxy.IPAddress = AppContext.ReadConfig();
-            Calbee.WMS.Services.ServiceMode.Mode.IPAddress = AppContext.ReadConfig();
-            */
         }
         private void DownloadFile(string urlPath)
         {

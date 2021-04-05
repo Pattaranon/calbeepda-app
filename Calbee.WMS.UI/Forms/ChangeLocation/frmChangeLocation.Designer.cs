@@ -379,7 +379,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmChangeLocation";
-            this.Text = "Change Status";
+            this.Text = "Change Location";
             this.Load += new System.EventHandler(this.frmChangeStatus_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmChangeStatus_KeyUp);
             this.tabChangeLocation.ResumeLayout(false);

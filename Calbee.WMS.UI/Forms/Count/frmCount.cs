@@ -145,6 +145,50 @@ namespace Calbee.WMS.UI.Forms.Count
                 }
             }
         }
+        private void ItemStatusBinding()
+        {
+            try
+            {
+                List<Calbee.WMS.Services.MasterService.tbc_Status> _listItemStatus = new List<Calbee.WMS.Services.MasterService.tbc_Status>();
+                _listItemStatus = Calbee.WMS.Services.Masters.MasterServiceProxy.WS.GetStatus(Calbee.Infra.Common.Constants.WConstants.reciveItemStatusType).ToList();
+                if (_listItemStatus != null)
+                {
+                    if (_listItemStatus.Count() > 0)
+                    {
+                        // Default value ReceiveNumber
+                        ComboBoxBinding.BindEntityToCombobox(_listItemStatus, this.cmbItemStatus, "StatusName", "StatusName", "");
+                    }
+                    else
+                    {
+                        this.cmbItemStatus.DataSource = null;
+                    }
+                }
+                else
+                {
+                    this.cmbItemStatus.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null)
+                {
+                    MsgBox.DialogError(ex.InnerException.Message.ToString());
+                }
+                else
+                {
+                    if (Calbee.Infra.Common.Constants.IConstants.CatchFlag.Equals("Y"))
+                    {
+                        // Show error description detail
+                        MsgBox.DialogError(ex.GetBaseException().ToString());
+                    }
+                    else
+                    {
+                        // Show message error
+                        MsgBox.DialogError(ex.Message.ToString());
+                    }
+                }
+            }
+        }
         private bool DoValidate()
         {
             try
@@ -296,7 +340,7 @@ namespace Calbee.WMS.UI.Forms.Count
             try
             {
                 eventcomboCountNumner = true;
-                //this.lblResultCounter.Text = "0/0";
+                ItemStatusBinding();
                 countNumberBinding(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL);
             }
             catch (Exception ex)

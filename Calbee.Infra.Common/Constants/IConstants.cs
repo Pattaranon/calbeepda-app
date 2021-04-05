@@ -11,7 +11,8 @@ namespace Calbee.Infra.Common.Constants
         /// IPAddress
         /// </summary>
         // Calbee WMS
-        public static string ipAddress = "192.168.1.133";
+        // public static string ipAddress = "192.168.1.133";
+        public static string ipAddress = "192.168.100.14";
 
         // Local WMS
         //public static string ipAddress = "43.229.78.24";

@@ -11,7 +11,7 @@ namespace Calbee.WMS.Services.Authorization
         public static int _UserID = 0;
         private static string _IPAddress = Calbee.Infra.Common.Constants.IConstants.ipAddress;
         public static string FILE_CONFIG_PATH = new Uri(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "/config.txt").LocalPath;
-        //public static string FILE_CONFIG_PATH = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "/config.txt";
+        // public static string FILE_CONFIG_PATH = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "/config.txt";
 
         private static Calbee.WMS.Services.AuthorizeService.AuthorizeService _WS = new Calbee.WMS.Services.AuthorizeService.AuthorizeService();
 

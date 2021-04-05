@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?wsdl" filename="CountLocationService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?disco" filename="CountLocationService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?xsd=xsd3" filename="CountLocationService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?xsd=xsd4" filename="CountLocationService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?xsd=xsd1" filename="CountLocationService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?xsd=xsd2" filename="CountLocationService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?xsd=xsd0" filename="CountLocationService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://43.229.78.24/WMSService/CountLocationService.svc?xsd=xsd5" filename="CountLocationService4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

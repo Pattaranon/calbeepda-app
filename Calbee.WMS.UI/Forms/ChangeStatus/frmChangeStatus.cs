@@ -201,7 +201,7 @@ namespace Calbee.WMS.UI.Forms.ChangeStatus
                 pickup.ItemNumber = this.txtItemNumber.Text.Trim();
                 pickup.AllExp = false;
                 pickup.AllExpSpecified = true;
-                pickup.ExpiryDate = this.dtpExpiryDate.Value.ToString("yyy-MM-dd");
+                pickup.ExpiryDate = this.dtpExpiryDate.Value.ToString("yyyy-MM-dd");
                 pickup.AllLot = false;
                 pickup.AllLotSpecified = true;
                 pickup.LotNumber = this.txtLotNumber.Text.Trim();

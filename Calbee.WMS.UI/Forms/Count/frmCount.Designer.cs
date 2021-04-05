@@ -49,10 +49,10 @@
             this.lblHeaderMainMenu = new System.Windows.Forms.Label();
             this.lblResultCounter = new System.Windows.Forms.Label();
             this.lblReceived = new System.Windows.Forms.Label();
-            this.txtExpiryDate = new Calbee.WMS.UI.UserControls.AutoCompleteTextBox();
-            this.txtLotNumber = new Calbee.WMS.UI.UserControls.AutoCompleteTextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtExpiryDate = new Calbee.WMS.UI.UserControls.AutoCompleteTextBox();
+            this.txtLotNumber = new Calbee.WMS.UI.UserControls.AutoCompleteTextBox();
             this.SuspendLayout();
             // 
             // txtItemNumber
@@ -252,6 +252,26 @@
             this.lblReceived.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblReceived.Visible = false;
             // 
+            // lblDescription
+            // 
+            this.lblDescription.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
+            this.lblDescription.Location = new System.Drawing.Point(12, 108);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(75, 13);
+            this.lblDescription.Text = "Description";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.BackColor = System.Drawing.Color.White;
+            this.txtDescription.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
+            this.txtDescription.ForeColor = System.Drawing.Color.Black;
+            this.txtDescription.Location = new System.Drawing.Point(89, 105);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
+            this.txtDescription.Size = new System.Drawing.Size(147, 48);
+            this.txtDescription.TabIndex = 4;
+            // 
             // txtExpiryDate
             // 
             this.txtExpiryDate.BackColor = System.Drawing.Color.White;
@@ -275,26 +295,6 @@
             this.txtLotNumber.TabIndex = 5;
             this.txtLotNumber.SelectedIndexChangeds += new System.EventHandler(this.txtLotNumber_SelectedIndexChangeds);
             this.txtLotNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLotNumber_KeyDowns);
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblDescription.Location = new System.Drawing.Point(12, 108);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(75, 13);
-            this.lblDescription.Text = "Description";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.BackColor = System.Drawing.Color.White;
-            this.txtDescription.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(89, 105);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.ReadOnly = true;
-            this.txtDescription.Size = new System.Drawing.Size(147, 48);
-            this.txtDescription.TabIndex = 4;
             // 
             // frmCount
             // 

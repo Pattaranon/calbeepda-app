@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Count" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Transaction.Count" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://43.229.78.24/WMSService/CountLocationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" />
+  <xs:complexType name="ArrayOftbt_CountLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tbt_CountLocation" nillable="true" type="tns:tbt_CountLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftbt_CountLocation" nillable="true" type="tns:ArrayOftbt_CountLocation" />
+  <xs:complexType name="tbt_CountLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CountId" type="xs:long" />
+      <xs:element minOccurs="0" name="CountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WMS.Service.Models.Master" minOccurs="0" name="Warehouse" nillable="true" type="q1:tbm_Warehouse" />
+      <xs:element minOccurs="0" name="WarehouseId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tbt_CountLocation" nillable="true" type="tns:tbt_CountLocation" />
+  <xs:complexType name="ArrayOfCountLocationDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CountLocationDetail" nillable="true" type="tns:CountLocationDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountLocationDetail" nillable="true" type="tns:ArrayOfCountLocationDetail" />
+  <xs:complexType name="CountLocationDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlternateItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CTCCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="CountId" type="xs:long" />
+      <xs:element minOccurs="0" name="CountQty" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="CrossRefUom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDateControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="LocationId" type="xs:int" />
+      <xs:element minOccurs="0" name="LotControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="StockQty" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CountLocationDetail" nillable="true" type="tns:CountLocationDetail" />
+  <xs:complexType name="CountItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountQty" type="xs:double" />
+      <xs:element minOccurs="0" name="Device" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LPN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentLPN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlantCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CountItem" nillable="true" type="tns:CountItem" />
+</xs:schema>

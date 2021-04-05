@@ -1,0 +1,94 @@
+﻿v.1.0.0.0 By Pattaranon.ply 2019-03-24 
+	- แก้ไขเรื่องการ Custom Dropdownlist ให้สามารถ KeySearch ได้ 
+	- Backup source code ไว้ที่ Folder backup ไว้เรียบร้อยแล้ว
+	- ทำหน้าจอ PickItem และ Putaway To Staging โดยการเขียน code ไปแล้ว
+	- ปรับหน้าจอ Receive
+	- ปรับหน้าจอ PickItem
+	- เขียน code ในส่วนของหน้าจอ ShortPickItem
+	- Design หน้าจอ Count ใหม่
+	- แก้ไข code ใหม่ โดยให้มีการใช้งาน Constan
+v.1.0.0.3 By Pattaranon.ply 2019-06-01
+	- แก้ไขหน้าจอ Count, Load, PickItem, Pickup, ShortPick, Putaway, Receive เพิ่มเติม Item Name / Description จะใช้ชื่อว่า Item Name หรือ Description ซ่อน Control textbox/label : ExpiryDate ออก
+v.1.0.0.4 By Pattaranon.ply 2019-06-21
+	- แก้ไขหน้าจอ Count, Load, PickItem, Pickup, ShortPick, Putaway, Receive ปรับ Fornt description เพิ่มอีก1 เนื่องจาก ลูกค้ามองเห็นไม่ชัด
+	- ปรับ Textbox, Combobox ทั้งหมด ให้มี Backgroud เป็นสีขาว
+	- Set textbox description ให้เป็น mode readonly
+v.1.0.0.5 By Pattaranon.ply 2019-06-25
+	- แก้ไขหน้าจอ Receive โดยให้สามารถ Enter หลังมา Focus ที่ Qty
+	- เพิ่ม Function สำหรับการบันทึก เช่น เมื่อกด F1 ให้ไปเรียกปุ่ม Save
+	- เพิ่ม Function เมื่อ Enter ที่ textbox Qty ในทุกหน้าจอ
+	- เพิ่ม Label 0/0 ในหน้าจอ Load เพื่อแสดงจำนวนการ Load
+v.1.0.0.6 By Pattaranon.ply 2019-07-18
+	- ปรับแก้ไขหน้าจอ Login ให้ลบ hiden label textbox username & password ออก
+	- เพิ่ม Function check auto update... เพื่อตรวจสอบรุ่นโปรแกรมตัวใหม่
+v.1.0.0.7 By Pattaranon.ply 2019-07-26
+	- ปรับแก้ไขหน้าจอรับ โดยเอา else ออกของ MsgBox.DialogWarning("This LPN : " + this.txtReceiveLPN.Text.Trim() + " Already received");
+	- ปรับแก้ไข Default IConstants ของ IPAddress
+v.1.0.0.8 By Pattaranon.ply 2019-07-26
+	- ปรับแก้ไขหน้าจอตอน scan LPN หากกรณี Error ให้ Focus text ด้วย
+	-  ปรับแก้ไขหน้าจอShortPickItem, Receive, Load ย้าย label counter ไปอยู่ด้านบน
+	- ปรับหน้าจอ Inventory ในส่วนของ Colunm LPN ให้มาอยู่ด้านหน้า และ Sort LPN
+	- ตรวจสอบ โปรแกรม already running หากมีมากกว่า 1 alert message
+v.1.0.0.9 By Pattaranon.ply 2019-08-22
+	- ปรับข้อมูล ReceiveLocation มาไว้ด้านล่างสุด
+	- แสกน ordernumber ระบบจะไป focus ที่ receive LPN
+	- แสกน recieve LPN จะได้รายละเอียดของ itemnumber จากนั้นจะไป focus ที่ receive location
+	- แสกน receive location หากมีข้อมูล location ในระบบ จะมี message confirm เพื่อยืนยันข้อมูล กด Yes ระบบจะบันทึกข้อมูล
+v.1.0.0.10 By Pattaranon.ply 2019-09-04
+	- แก้ไขหน้าจอรับในส่วนของ Counter
+	-แก้ไขการเปิด-ปิด หน้าจอโดยเปลี่ยนเป็นใช้ using	
+v.1.0.0.11 By Pattaranon.ply 2019-09-06
+	- แก้ไขหน้าจอรับโดยมีการปรับส่ง parameter item เข้าไปใน service เพื่อดึงค่า counter ออกมาแสดง
+	- แก้ไขหน้าจอรัย Receivedate ให้รับวันที่ มาจาก Server
+	- แก้ไขหน้าจอการเปิด-ปิดหน้าจอใหม่ ถอด function การตรวจสอบ Process การใช้งานหน้าจอ
+	- เพิ่มการ Clear textbox description after save
+	- เพิ่ม Function 11 ในการ ExitApplication
+v.1.0.0.12 By Pattaranon.ply 2019-09-09
+	- Build deploy ใหม่
+v.1.0.0.13 By Pattaranon.ply 2019-09-19
+	- เพิ่มหน้าจอ Change Status ในหน้า main menu
+	- เพิ่ม Textbox CarLicence ในหน้าจอ ShortPick
+	- ปิด menu Load ออก
+v.1.0.0.14 By Pattaranon.ply 2019-10-06
+	- เพิ่ม Function การ Default itemstatus ให้เป็น Normal ในหน้าจอรับ
+v.1.0.0.15 By Pattaranon.ply 2019-10-09
+	- เพิ่ม Colunm LPN ในหน้าจอ Shortpickitem
+v.1.0.0.16 By Pattaranon.ply 2019-10-16
+	- เพิ่ม Label sum pick ในหน้าจอ ShortPickItem
+	- เพิ่ม Colunm ใน Gridview PickStatus
+	- ย้าย Colunm
+v.1.0.0.17 By Pattaranon.ply 2019-10-24
+	- ปรับ Colunm LPN ให้เป็นตัวเล็ก
+v.1.0.0.18 By Pattaranon.ply 2019-10-29
+	- ปรับหน้าจอ Inventory เพิ่ม Dropdown และ Label counter
+v.1.0.0.19 By Pattaranon.ply 2019-11-15
+	- ปรับหน้าจอ Shortpick ลบ Label PlanQty ออก
+	- เพิ่มหน้าจอ frmReceiveRawMaterial
+	- ปรับแก้ไขหน้า main menu เพิ่มเมนู "Receive Raw Material"
+v.1.0.0.20 By Pattaranon.ply 2020-03-28
+	- ปรับ Function การ Scan ItemNumner ให้ไปเรียก Function GetInboundDetails
+	- เปลี่ยนชื่อ Service ใหม่จาก Service1 เป็น WMSService
+v.1.0.0.21 By Pattaranon.ply 2020-04-20
+	- ปรับหน้าจอ Putaway ให้เพิ่ม logic การตรวจสอบ lpn และ to lpn
+	- ปรับหน้าจอ Pickup ให้เพิ่ม logic การตรวจสอบ lpn และ to lpn
+	- ปรับหน้า Receive RM เอา Receive Location default ออก
+v.1.0.0.22 By Pattaranon.ply 2020-06-10
+	- ปรับให้เป็น config service เพิ่มไฟล์ให้เป็น service name เข้ามาด้วย
+v.1.0.0.23 By Pattaranon.ply 2020-06-16
+	- หน้ารับหลังจากสแกน order แล้ว ให้ไป focus ที่ receive location ตอนนี้มันไป focus ที่ item เพราะช่อง receive location มันเป็นว่างอยู่ตอนนี้นะ
+	- หน้า pickup / putaway จะเลือก all item/ all lot / all expire ไม่ได้จะฟ้องว่าให้ระบุ lpn ทั้งๆที่ไม่ได้ control lpn
+	- หน้า PcikItem เพิ่ม >=1 
+v.1.0.0.24 By Pattaranon.ply 2020-07-24
+	- เพิ่มหน้าจอ Change location
+	- แก้ไขหน้า Receive RM จัดเรื่อง lot number fotmat date และ Expire date + 365
+v.1.0.0.25 By Pattaranon.ply 2020-08-05
+	- แก้ไขหน้าจอ Receive RM จัด Format date ของ Receive Date and Expire date
+v.1.0.0.26 By Pattaranon.ply 2020-08-13
+	- แก้ไขหน้าจอ transfer location อยากให้หลังสแกนไป focus ช่อง ท้ายสุดเลยน่าจะ lo ปลายทางป่าวเค้าจะได้ยิงปลายทางเลยตอนนี้มัน focus qty
+v.1.0.0.27 By Pattaranon.ply 2020-08-22
+	- แก้ไขหน้า Receive RM จัดเรื่อง lot number & Receive date fotmat date เป็น dd-MM-yyyy
+	- เพิ่ม Event keydown ในหน้าจอ ย้ายสถานที่จัดเก็บ ให้เมื่อ scan to location สามารถ Auto save ได้
+v.1.0.0.28 By Pattaranon.ply 2020-11-25
+	- เพิ่มหน้าจอ Transfer
+v.1.0.0.29 By Pattaranon.ply 2020-12-07
+	- แก้ไขหน้่าจอ Count LPN ใหม่ ให้เรีนก Service เส้นใหม่

@@ -123,6 +123,34 @@ namespace Calbee.Infra.Shared
                 throw;
             }
         }
+        public List<Calbee.WMS.Services.MasterService.ItemUom> UOMDDLSingleBinding(string itemNumber)
+        {
+            try
+            {
+                List<Calbee.WMS.Services.MasterService.ItemUom> _listUOM = new List<Calbee.WMS.Services.MasterService.ItemUom>();
+                Calbee.WMS.Services.MasterService.ItemUom _master;
+                _listUOM = Calbee.WMS.Services.Masters.MasterServiceProxy.WS.GetItemUoms(itemNumber, string.Empty).ToList();
+                if (_listUOM != null)
+                {
+                    if (_listUOM.Count() > 1)
+                    {
+                        _master = new Calbee.WMS.Services.MasterService.ItemUom();
+                        _master.Uom = Calbee.Infra.Common.Constants.WConstants.defaultDropdownSelect;
+                        _listUOM.Insert(0, _master);
+                    }
+                }
+                else
+                {
+                    _listUOM = null;
+                }
+
+                return _listUOM;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public List<Calbee.WMS.Services.MasterService.ItemUom> UOMDDLDefault(string itemNumber)
         {
             try
