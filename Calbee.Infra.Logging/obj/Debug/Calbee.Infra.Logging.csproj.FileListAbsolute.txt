@@ -173,3 +173,8 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\CalbeeWindowsMobiles\Calbee.Infra.Logging\obj\Debug\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\CalbeeWindowsMobiles\Calbee.Infra.Logging\obj\Debug\Calbee.Infra.Logging.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\CalbeeWindowsMobiles\Calbee.Infra.Logging\obj\Debug\Calbee.Infra.Logging.pdb
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Logging\bin\Debug\Calbee.Infra.Logging.dll
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Logging\bin\Debug\Calbee.Infra.Logging.pdb
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Logging\obj\Debug\ResolveAssemblyReference.cache
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Logging\obj\Debug\Calbee.Infra.Logging.dll
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Logging\obj\Debug\Calbee.Infra.Logging.pdb
