@@ -328,3 +328,14 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.Infra.Shared\obj\Release\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.Infra.Shared\obj\Release\Calbee.Infra.Shared.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.Infra.Shared\obj\Release\Calbee.Infra.Shared.pdb
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.Infra.Shared.dll
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.Infra.Shared.pdb
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.Infra.Common.dll
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.WMS.Entities.dll
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.WMS.Services.dll
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.Infra.Common.pdb
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.WMS.Services.pdb
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\bin\Release\Calbee.WMS.Entities.pdb
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\obj\Release\ResolveAssemblyReference.cache
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\obj\Release\Calbee.Infra.Shared.dll
+D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\obj\Release\Calbee.Infra.Shared.pdb
