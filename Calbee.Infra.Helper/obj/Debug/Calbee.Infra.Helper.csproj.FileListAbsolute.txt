@@ -311,12 +311,3 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\CalbeeWindowsMobiles\Calbee.Infra.Helper\obj\Debug\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\CalbeeWindowsMobiles\Calbee.Infra.Helper\obj\Debug\Calbee.Infra.Helper.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.32\CalbeeWindowsMobiles\Calbee.Infra.Helper\obj\Debug\Calbee.Infra.Helper.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\bin\Debug\Calbee.Infra.Helper.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\bin\Debug\Calbee.Infra.Helper.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\bin\Debug\Calbee.Infra.Common.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\bin\Debug\Calbee.WMS.Services.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\bin\Debug\Calbee.Infra.Common.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\bin\Debug\Calbee.WMS.Services.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\obj\Debug\ResolveAssemblyReference.cache
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\obj\Debug\Calbee.Infra.Helper.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Helper\obj\Debug\Calbee.Infra.Helper.pdb

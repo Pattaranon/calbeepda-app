@@ -92,3 +92,9 @@ v.1.0.0.28 By Pattaranon.ply 2020-11-25
 	- เพิ่มหน้าจอ Transfer
 v.1.0.0.29 By Pattaranon.ply 2020-12-07
 	- แก้ไขหน้่าจอ Count LPN ใหม่ ให้เรีนก Service เส้นใหม่
+v.1.0.0.30 By Pattaranon.ply 2021-01-25
+	- แก้ไขหน้า Count location ส่งค่า lot number ไปด้วย
+v.1.0.0.31 By Pattaranon.ply 2021-02-23
+	- แก้ไขหน้าจอ CountLPN
+v.1.0.0.32 By Pattaranon.ply 2021-02-24
+	- แก้ไขหน้าจอ CountLPN เพิ่มฟิวส์การแสดงข้อมูลเพิ่มเติม

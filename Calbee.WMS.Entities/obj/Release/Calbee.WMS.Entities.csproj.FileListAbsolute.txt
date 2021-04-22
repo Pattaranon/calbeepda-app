@@ -148,8 +148,3 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.WMS.Entities\obj\Release\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.WMS.Entities\obj\Release\Calbee.WMS.Entities.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.WMS.Entities\obj\Release\Calbee.WMS.Entities.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Entities\bin\Release\Calbee.WMS.Entities.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Entities\bin\Release\Calbee.WMS.Entities.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Entities\obj\Release\ResolveAssemblyReference.cache
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Entities\obj\Release\Calbee.WMS.Entities.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Entities\obj\Release\Calbee.WMS.Entities.pdb

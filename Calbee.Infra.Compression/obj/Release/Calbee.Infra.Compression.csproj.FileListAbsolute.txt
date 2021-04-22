@@ -178,9 +178,3 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.Infra.Compression\obj\Release\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.Infra.Compression\obj\Release\Calbee.Infra.Compression.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\v.1.0.0.30\CalbeeWindowsMobiles\Calbee.Infra.Compression\obj\Release\Calbee.Infra.Compression.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\bin\Release\Calbee.Infra.Compression.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\bin\Release\Calbee.Infra.Compression.pdb
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\bin\Release\Ionic.Zip.Reduced.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\obj\Release\ResolveAssemblyReference.cache
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\obj\Release\Calbee.Infra.Compression.dll
-D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\obj\Release\Calbee.Infra.Compression.pdb
