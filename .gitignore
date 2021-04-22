@@ -1,5 +1,6 @@
 # Build results
-Calbee.Infra.Common/[Dd]ebug/
+Calbee.Infra.Common/bin/[Dd]ebug/
+Calbee.Infra.Common/obj/[Dd]ebug/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
