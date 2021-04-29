@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbCountNumner = new System.Windows.Forms.ComboBox();
             this.lblCountNo = new System.Windows.Forms.Label();
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -47,18 +46,8 @@
             this.cmbItemNumber = new System.Windows.Forms.ComboBox();
             this.txtCtcCode = new System.Windows.Forms.TextBox();
             this.lblCTCCode = new System.Windows.Forms.Label();
+            this.txtCountNumber = new Calbee.WMS.UI.UserControls.AutoCompleteTextBox();
             this.SuspendLayout();
-            // 
-            // cmbCountNumner
-            // 
-            this.cmbCountNumner.BackColor = System.Drawing.Color.White;
-            this.cmbCountNumner.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.cmbCountNumner.ForeColor = System.Drawing.Color.Black;
-            this.cmbCountNumner.Location = new System.Drawing.Point(86, 33);
-            this.cmbCountNumner.Name = "cmbCountNumner";
-            this.cmbCountNumner.Size = new System.Drawing.Size(148, 18);
-            this.cmbCountNumner.TabIndex = 0;
-            this.cmbCountNumner.SelectedIndexChanged += new System.EventHandler(this.cmbCountNumner_SelectedIndexChanged);
             // 
             // lblCountNo
             // 
@@ -226,6 +215,18 @@
             this.lblCTCCode.Size = new System.Drawing.Size(75, 15);
             this.lblCTCCode.Text = "CTC Code";
             // 
+            // txtCountNumber
+            // 
+            this.txtCountNumber.BackColor = System.Drawing.Color.White;
+            this.txtCountNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtCountNumber.Location = new System.Drawing.Point(86, 33);
+            this.txtCountNumber.Name = "txtCountNumber";
+            this.txtCountNumber.SelectedIndex = -1;
+            this.txtCountNumber.Size = new System.Drawing.Size(148, 18);
+            this.txtCountNumber.TabIndex = 0;
+            this.txtCountNumber.SelectedIndexChangeds += new System.EventHandler(this.txtCountNumber_SelectedIndexChangeds);
+            this.txtCountNumber.KeyDowns += new System.Windows.Forms.KeyEventHandler(this.txtCountNumber_KeyDowns);
+            // 
             // frmCountLPN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -233,13 +234,13 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(242, 307);
             this.ControlBox = false;
+            this.Controls.Add(this.txtCountNumber);
             this.Controls.Add(this.txtCtcCode);
             this.Controls.Add(this.lblCTCCode);
             this.Controls.Add(this.cmbItemNumber);
             this.Controls.Add(this.cmbUOM);
             this.Controls.Add(this.lblUOM);
             this.Controls.Add(this.lblHeaderCountMenu);
-            this.Controls.Add(this.cmbCountNumner);
             this.Controls.Add(this.lblCountNo);
             this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.txtDescription);
@@ -266,7 +267,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbCountNumner;
         private System.Windows.Forms.Label lblCountNo;
         private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.TextBox txtDescription;
@@ -285,6 +285,7 @@
         private System.Windows.Forms.ComboBox cmbItemNumber;
         private System.Windows.Forms.TextBox txtCtcCode;
         private System.Windows.Forms.Label lblCTCCode;
+        private Calbee.WMS.UI.UserControls.AutoCompleteTextBox txtCountNumber;
 
     }
 }

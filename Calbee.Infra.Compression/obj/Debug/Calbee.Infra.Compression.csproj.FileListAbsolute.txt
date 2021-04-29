@@ -214,3 +214,9 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-a
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\obj\Debug\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\obj\Debug\Calbee.Infra.Compression.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Compression\obj\Debug\Calbee.Infra.Compression.pdb
+D:\workspaces\calbeepda-app\Calbee.Infra.Compression\bin\Debug\Calbee.Infra.Compression.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Compression\bin\Debug\Calbee.Infra.Compression.pdb
+D:\workspaces\calbeepda-app\Calbee.Infra.Compression\bin\Debug\Ionic.Zip.Reduced.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Compression\obj\Debug\ResolveAssemblyReference.cache
+D:\workspaces\calbeepda-app\Calbee.Infra.Compression\obj\Debug\Calbee.Infra.Compression.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Compression\obj\Debug\Calbee.Infra.Compression.pdb

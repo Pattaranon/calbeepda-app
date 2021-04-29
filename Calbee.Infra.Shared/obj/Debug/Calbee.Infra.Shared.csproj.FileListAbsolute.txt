@@ -388,3 +388,14 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-a
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\obj\Debug\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\obj\Debug\Calbee.Infra.Shared.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.Infra.Shared\obj\Debug\Calbee.Infra.Shared.pdb
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.Infra.Shared.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.Infra.Shared.pdb
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.Infra.Common.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.WMS.Entities.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.WMS.Services.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.Infra.Common.pdb
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.WMS.Services.pdb
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\bin\Debug\Calbee.WMS.Entities.pdb
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\obj\Debug\Calbee.Infra.Shared.dll
+D:\workspaces\calbeepda-app\Calbee.Infra.Shared\obj\Debug\Calbee.Infra.Shared.pdb

@@ -1254,3 +1254,47 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-a
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.csproj.GenerateResource.Cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.exe
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.WMS.UI.exe
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.WMS.UI.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Common.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Compression.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Helper.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Logging.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Shared.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.WMS.Entities.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.WMS.Services.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Ionic.Zip.Reduced.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Logging.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Helper.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Shared.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.WMS.Services.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.WMS.Entities.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Common.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\bin\Release\Calbee.Infra.Compression.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\ResolveAssemblyReference.cache
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Authentication.frmConfigWebService.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Authentication.frmLogin.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.FormsBases.frmBaseForms.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.FormsBases.frmBaseTitleHeader.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.ChangeLocation.frmChangeLocation.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.ChangeStatus.frmChangeStatus.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Count.frmCount.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Count.frmCountLPN.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Inventory.frmInventory.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Load.frmLoad.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Pickup.frmPickItem.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Pickup.frmPickup.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Pickup.frmShortPickItem.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Putaway.frmPutaway.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Putaway.frmPutawayStaging.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Receive.frmReceive.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Forms.Receive.frmReceiveRawMaterial.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.MainMenu.frmCountMenu.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.MainMenu.frmInventoryMenu.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.MainMenu.frmMainMenu.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.MainMenu.frmSelectWAF.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.Properties.Resources.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.UserControls.AutoCompleteTextBox.resources
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.csproj.GenerateResource.Cache
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.exe
+D:\workspaces\calbeepda-app\Calbee.WMS.UI\obj\Release\Calbee.WMS.UI.pdb

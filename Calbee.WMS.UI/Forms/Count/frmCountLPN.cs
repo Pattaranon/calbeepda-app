@@ -198,7 +198,8 @@ namespace Calbee.WMS.UI.Forms.Count
         {
             try
             {
-                var itemResult = Calbee.WMS.Services.Count.CountLocationServiceProxy.WS.GetCountDetail(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.cmbCountNumner.SelectedValue.ToString(), this.txtLocation.Text.Trim(), string.Empty, itemNumber);
+                // var itemResult = Calbee.WMS.Services.Count.CountLocationServiceProxy.WS.GetCountDetail(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.cmbCountNumner.SelectedValue.ToString(), this.txtLocation.Text.Trim(), string.Empty, itemNumber);
+                var itemResult = Calbee.WMS.Services.Count.CountLocationServiceProxy.WS.GetCountDetail(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.txtCountNumber.Text.Trim(), this.txtLocation.Text.Trim(), string.Empty, itemNumber);
                 if (itemResult != null)
                 {
                     this.txtDescription.Text = string.IsNullOrEmpty(itemResult.FirstOrDefault().ItemName) ? string.Empty : itemResult.FirstOrDefault().ItemName;
@@ -260,17 +261,21 @@ namespace Calbee.WMS.UI.Forms.Count
                     if (_listCountNumber.Count() >= 1)
                     {
                         _listCountNumber.Insert(0, Calbee.Infra.Common.Constants.WConstants.defaultDropdownSelect);
-                        ComboBoxBinding.BindLStringToCombobox(_listCountNumber, this.cmbCountNumner);
+                        txtCountNumber.SetArrayItemsToCombobox(_listCountNumber.ToArray());
                     }
                     else
                     {
-                        this.cmbCountNumner.DataSource = null;
+                        this.txtCountNumber.SetArrayItemsToCombobox(new string[] { "" });
+                        this.txtCountNumber.Text = string.Empty;
                     }
                 }
                 else
                 {
-                    this.cmbCountNumner.DataSource = null;
+                    this.txtCountNumber.SetArrayItemsToCombobox(new string[] { "" });
+                    this.txtCountNumber.Text = string.Empty;
                 }
+
+                txtCountNumber.customFocus();
             }
             catch (Exception ex)
             {
@@ -348,19 +353,21 @@ namespace Calbee.WMS.UI.Forms.Count
 
         private bool DoValidate()
         {
-            if (this.cmbCountNumner.DataSource != null)
+            if (!string.IsNullOrEmpty(txtCountNumber.Text))
             {
-                if (this.cmbCountNumner.SelectedValue.ToString() == Calbee.Infra.Common.Constants.WConstants.defaultDropdownSelect)
+                if (this.txtCountNumber.Text.Trim() == Calbee.Infra.Common.Constants.WConstants.defaultDropdownSelect)
                 {
                     MsgBox.DialogWarning("Please select count no");
                     return false;
                 }
             }
-            if (this.cmbCountNumner.DataSource == null)
+
+            if (string.IsNullOrEmpty(txtCountNumber.Text))
             {
                 MsgBox.DialogWarning("Please select count no");
                 return false;
             }
+
             else if (string.IsNullOrEmpty(this.cmbItemNumber.SelectedValue.ToString()))
             {
                 MsgBox.DialogWarning("Please select item number");
@@ -374,6 +381,11 @@ namespace Calbee.WMS.UI.Forms.Count
             else if (string.IsNullOrEmpty(this.txtQuantity.Text.Trim()))
             {
                 MsgBox.DialogWarning("Please input quantity");
+                return false;
+            }
+            else if (this.cmbItemStatus.DataSource == null)
+            {
+                MsgBox.DialogWarning("item status not found data");
                 return false;
             }
             else if (string.IsNullOrEmpty(this.cmbItemStatus.SelectedValue.ToString()))
@@ -393,7 +405,8 @@ namespace Calbee.WMS.UI.Forms.Count
                 Calbee.WMS.Services.CountLocationService.CountItem countItem = new Calbee.WMS.Services.CountLocationService.CountItem();
                 countItem.CountBy = Calbee.Infra.Common.Constants.WConstants.userName;
                 countItem.CountDate = AppContext.GetDateTimeServerString(Calbee.Infra.Common.Constants.WConstants.formatDateString);
-                countItem.CountNumber = this.cmbCountNumner.SelectedValue.ToString();
+                //countItem.CountNumber = this.cmbCountNumner.SelectedValue.ToString();
+                countItem.CountNumber = this.txtCountNumber.Text.Trim();
                 countItem.CountQty = Convert.ToDouble(this.txtQuantity.Text.Trim());
                 countItem.CountQtySpecified = true;
                 countItem.Device = AppContext.DeviceName;
@@ -440,6 +453,9 @@ namespace Calbee.WMS.UI.Forms.Count
         private void frmChangeStatus_Load(object sender, EventArgs e)
         {
             countNumberBinding(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL);
+
+            this.txtCountNumber.customFocus();
+            this.txtCountNumber.customSelectAll();
         }
         private void frmChangeStatus_KeyUp(object sender, KeyEventArgs e)
         {
@@ -567,7 +583,31 @@ namespace Calbee.WMS.UI.Forms.Count
             }
         }
 
-        private void cmbCountNumner_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtCountNumber_KeyDowns(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(txtCountNumber.Text))
+                {
+                    MsgBox.DialogWarning("Please scan count number");
+                    this.txtCountNumber.customFocus();
+                    return;
+                }
+                else if (this.txtCountNumber.Text == Calbee.Infra.Common.Constants.WConstants.defaultDropdownSelect)
+                {
+                    MsgBox.DialogWarning("Please select count number");
+                    this.txtCountNumber.customFocus();
+                    return;
+                }
+                else
+                {
+                    // Select accept
+                    this.txtLocation.Focus();
+                    this.txtLocation.SelectAll();
+                }
+            }
+        }
+        private void txtCountNumber_SelectedIndexChangeds(object sender, EventArgs e)
         {
             // Select accept
             this.txtLocation.Focus();
@@ -590,7 +630,8 @@ namespace Calbee.WMS.UI.Forms.Count
                     this.txtDescription.Text = string.Empty;
                     this.txtCtcCode.Text = string.Empty;
                     this.txtQuantity.Text = string.Empty;
-                    itemNumberBinding(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.cmbCountNumner.SelectedValue.ToString(), this.txtLocation.Text.Trim());
+                    //itemNumberBinding(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.cmbCountNumner.SelectedValue.ToString(), this.txtLocation.Text.Trim());
+                    itemNumberBinding(Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.txtCountNumber.Text, this.txtLocation.Text.Trim());
 
                     this.cmbItemNumber.Focus();
                 }

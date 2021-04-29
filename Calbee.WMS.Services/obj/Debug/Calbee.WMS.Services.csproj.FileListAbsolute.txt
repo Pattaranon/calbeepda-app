@@ -253,3 +253,10 @@ D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-a
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Services\obj\Debug\ResolveAssemblyReference.cache
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Services\obj\Debug\Calbee.WMS.Services.dll
 D:\Works\2019\Weltron ID Tech Project\04_Source Code\Windows Mobiles\calbeepda-app\Calbee.WMS.Services\obj\Debug\Calbee.WMS.Services.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.Services\bin\Debug\Calbee.WMS.Services.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.Services\bin\Debug\Calbee.WMS.Services.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.Services\bin\Debug\Calbee.Infra.Common.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.Services\bin\Debug\Calbee.Infra.Common.pdb
+D:\workspaces\calbeepda-app\Calbee.WMS.Services\obj\Debug\ResolveAssemblyReference.cache
+D:\workspaces\calbeepda-app\Calbee.WMS.Services\obj\Debug\Calbee.WMS.Services.dll
+D:\workspaces\calbeepda-app\Calbee.WMS.Services\obj\Debug\Calbee.WMS.Services.pdb

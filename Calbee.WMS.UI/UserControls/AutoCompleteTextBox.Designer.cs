@@ -54,7 +54,7 @@ namespace Calbee.WMS.UI.UserControls
             this.innerTextBox.Location = new System.Drawing.Point(0, 0);
             this.innerTextBox.Name = "innerTextBox";
             this.innerTextBox.Size = new System.Drawing.Size(175, 23);
-            this.innerTextBox.TabIndex = 1;
+            this.innerTextBox.TabIndex = 0;
             this.innerTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.innerTextBox_KeyDown);
             // 
             // AutoCompleteTextBox
