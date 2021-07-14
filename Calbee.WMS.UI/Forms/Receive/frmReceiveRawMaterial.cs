@@ -271,8 +271,8 @@ namespace Calbee.WMS.UI.Forms.Receive
             this.txtItemNumber.Enabled = true;
             this.txtDescription.Text = string.Empty;
             this.txtDescription.Enabled = false;
-            this.txtLotNumber.Text = string.Empty;
-            this.txtLotNumber.Enabled = true;
+            this.dtpLotNumber.Value = DateTime.Now;
+            this.dtpLotNumber.Enabled = true;
             this.dtpExpiryDate.Value = DateTime.Now;
             this.dtpExpiryDate.Enabled = true;
             this.txtQuantity.Text = string.Empty;
@@ -290,8 +290,8 @@ namespace Calbee.WMS.UI.Forms.Receive
             this.txtItemNumber.Enabled = true;
             this.txtDescription.Text = string.Empty;
             this.txtDescription.Enabled = false;
-            this.txtLotNumber.Text = string.Empty;
-            this.txtLotNumber.Enabled = true;
+            this.dtpLotNumber.Value = DateTime.Now;
+            this.dtpLotNumber.Enabled = true;
             this.dtpExpiryDate.Value = DateTime.Now;
             this.dtpExpiryDate.Enabled = true;
             this.txtQuantity.Text = string.Empty;
@@ -496,18 +496,6 @@ namespace Calbee.WMS.UI.Forms.Receive
                     MsgBox.DialogWarning("Please scan receive location");
                     result = false;
                 }
-                else if (string.IsNullOrEmpty(this.txtLotNumber.Text))
-                {
-                    if (this.txtLotNumber.Enabled)
-                    {
-                        MsgBox.DialogWarning("Please select lot number");
-                        return false;
-                    }
-                    else
-                    {
-                        result = true;
-                    }
-                }
                 else if (string.IsNullOrEmpty(this.txtQuantity.Text.Trim()))
                 {
                     MsgBox.DialogWarning("Please input quantity");
@@ -559,9 +547,9 @@ namespace Calbee.WMS.UI.Forms.Receive
                 receive.ItemNumber = this.txtItemNumber.Text;
                 receive.LPN = this.txtReceiveLPN.Text;
                 receive.Location = this.txtReceiveLocation.Text.Trim();
-                if (this.txtLotNumber.Enabled)
+                if (this.dtpLotNumber.Enabled)
                 {
-                    receive.LotNumber = this.txtLotNumber.Text.Trim();
+                    receive.LotNumber = Convert.ToDateTime(this.dtpLotNumber.Value, _cultureEnInfo).ToString(Calbee.Infra.Common.Constants.WConstants.formatDateString, _cultureEnInfo);
                 }
                 receive.OrderNumber = this.txtOrderNumber.Text.Trim();
                 receive.ParentLPN = string.Empty;
@@ -1087,12 +1075,11 @@ namespace Calbee.WMS.UI.Forms.Receive
                                     this.txtDescription.Text = string.IsNullOrEmpty(inboundLpnDetailResult.FirstOrDefault().ItemName) ? string.Empty : inboundLpnDetailResult.FirstOrDefault().ItemName;
                                     if (!string.IsNullOrEmpty(inboundLpnDetailResult.FirstOrDefault().LotNumber))
                                     {
-                                        DateTime lotNumberDate = DateTime.Parse(inboundLpnDetailResult.FirstOrDefault().LotNumber);
-                                        this.txtLotNumber.Text = lotNumberDate.ToString(Calbee.Infra.Common.Constants.WConstants.formatDayDateString);
+                                        this.dtpLotNumber.Value = DateTime.Parse(inboundLpnDetailResult.FirstOrDefault().LotNumber);
                                     }
                                     else
                                     {
-                                        this.txtLotNumber.Text = AppContext.GetDateTimeServer().ToString(Calbee.Infra.Common.Constants.WConstants.formatDayDateString);
+                                        this.dtpLotNumber.Value = AppContext.GetDateTimeServer();
                                     }
                                     if (inboundLpnDetailResult.FirstOrDefault().ExpiryDate != null)
                                     {
@@ -1109,7 +1096,7 @@ namespace Calbee.WMS.UI.Forms.Receive
                                     this.lblResultCounter.Text = counterResult.PalletReceived + "/" + counterResult.TotalBoxReceived + " Total " + counterResult.PalletPlan;
                                     // Disable control
                                     this.txtItemNumber.Enabled = false;
-                                    this.txtLotNumber.Enabled = false;
+                                    this.dtpLotNumber.Enabled = false;
                                     this.dtpExpiryDate.Enabled = false;
                                     this.txtQuantity.Focus();
                                     this.txtQuantity.SelectAll();
@@ -1183,7 +1170,7 @@ namespace Calbee.WMS.UI.Forms.Receive
                     try
                     {
                         // Call service getInboundDetail
-                        this.txtLotNumber.Enabled = true;
+                        this.dtpLotNumber.Enabled = true;
                         if (orderType.Contains(Calbee.Infra.Common.Constants.WConstants.orderProductionType))
                         {
                             // Production
@@ -1194,17 +1181,16 @@ namespace Calbee.WMS.UI.Forms.Receive
                                 {
                                     this.txtDescription.Text = string.IsNullOrEmpty(inboundLpnDetailResult.FirstOrDefault().ItemName) ? string.Empty : inboundLpnDetailResult.FirstOrDefault().ItemName;
 
-                                    this.txtLotNumber.Enabled = inboundLpnDetailResult.FirstOrDefault().LotControl;
+                                    this.dtpLotNumber.Enabled = inboundLpnDetailResult.FirstOrDefault().LotControl;
                                     this.dtpExpiryDate.Enabled = inboundLpnDetailResult.FirstOrDefault().ExpiryDateControl;
 
                                     if (!string.IsNullOrEmpty(inboundLpnDetailResult.FirstOrDefault().LotNumber))
                                     {
-                                        DateTime lotNumberDate = DateTime.Parse(inboundLpnDetailResult.FirstOrDefault().LotNumber);
-                                        this.txtLotNumber.Text = lotNumberDate.ToString(Calbee.Infra.Common.Constants.WConstants.formatDayDateString);
+                                        this.dtpLotNumber.Value = DateTime.Parse(inboundLpnDetailResult.FirstOrDefault().LotNumber);
                                     }
                                     else
                                     {
-                                        this.txtLotNumber.Text = AppContext.GetDateTimeServer().ToString(Calbee.Infra.Common.Constants.WConstants.formatDayDateString);
+                                        this.dtpLotNumber.Value = AppContext.GetDateTimeServer();
                                     }
 
                                     this.dtpExpiryDate.Value = AppContext.GetDateTimeServer().AddDays(inboundLpnDetailResult.FirstOrDefault().DaysToExpire.Value);
@@ -1243,13 +1229,12 @@ namespace Calbee.WMS.UI.Forms.Receive
                                     }
                                     if (inboundDetailResult.FirstOrDefault().LotControl)
                                     {
-                                        this.txtLotNumber.Text = AppContext.GetDateTimeServerString(Calbee.Infra.Common.Constants.WConstants.formatDayDateString);
-                                        this.txtLotNumber.Enabled = true;
+                                        this.dtpLotNumber.Value = AppContext.GetDateTimeServer();
+                                        this.dtpLotNumber.Enabled = true;
                                     }
                                     else
                                     {
-                                        this.txtLotNumber.Text = string.Empty;
-                                        this.txtLotNumber.Enabled = false;
+                                        this.dtpLotNumber.Enabled = false;
                                     }
 
                                     this.txtDescription.Text = string.IsNullOrEmpty(inboundDetailResult.FirstOrDefault().ItemName) ? string.Empty : inboundDetailResult.FirstOrDefault().ItemName;
@@ -1371,55 +1356,6 @@ namespace Calbee.WMS.UI.Forms.Receive
             RefreshInboundDetail(this.txtOrderNumber.Text.Trim(), string.Empty, string.Empty);
             dgvReceiveProduction.Visible = false;
             dgvReceiveDetail.Visible = true;
-        }
-        private void txtLotNumber_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (string.IsNullOrEmpty(txtLotNumber.Text.Trim()))
-                {
-                    MsgBox.DialogWarning("Plases scan lot number");
-                    this.txtOrderNumber.Focus();
-                    this.txtOrderNumber.SelectAll();
-                    return;
-                }
-                else
-                {
-                    try
-                    {
-                        var inboundLpnDetailResult = Calbee.WMS.Services.Inbound.InboundServiceProxy.WS.GetInboundDetails(this.txtOrderNumber.Text.Trim(), Calbee.Infra.Common.Constants.WConstants.wareHouseDDL, this.txtReceiveLPN.Text.Trim(), string.Empty);
-                        if (inboundLpnDetailResult != null)
-                        {
-                            if (inboundLpnDetailResult.Count() > 0)
-                            {
-                                DateTime lotNumberDate = DateTime.ParseExact(txtLotNumber.Text, Calbee.Infra.Common.Constants.WConstants.formatDayDateString, System.Globalization.CultureInfo.InvariantCulture);
-                                this.dtpExpiryDate.Value = lotNumberDate.AddDays(inboundLpnDetailResult.FirstOrDefault().DaysToExpire.Value);
-                            }
-                            else
-                            {
-                                DateTime lotNumberDate = DateTime.ParseExact(txtLotNumber.Text, Calbee.Infra.Common.Constants.WConstants.formatDayDateString, System.Globalization.CultureInfo.InvariantCulture);
-                                this.dtpExpiryDate.Value = lotNumberDate.AddDays(365);
-                            }
-                        }
-                        else
-                        {
-                            DateTime lotNumberDate = DateTime.ParseExact(txtLotNumber.Text, Calbee.Infra.Common.Constants.WConstants.formatDayDateString, System.Globalization.CultureInfo.InvariantCulture);
-                            this.dtpExpiryDate.Value = lotNumberDate.AddDays(365);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        if (ex.Message.ToString().IndexOf("DateTime") > 0)
-                        {
-                            MsgBox.DialogWarning("Format date of lot number incorrect");
-                        }
-                        else
-                        {
-                            MsgBox.DialogWarning(ex.Message.ToString());
-                        }
-                    }
-                }
-            }
         }
 
         #endregion

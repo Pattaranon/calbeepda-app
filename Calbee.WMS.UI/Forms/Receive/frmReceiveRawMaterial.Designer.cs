@@ -47,7 +47,6 @@
             this.lblQuantity = new System.Windows.Forms.Label();
             this.dtpExpiryDate = new System.Windows.Forms.DateTimePicker();
             this.lblExpiryDate = new System.Windows.Forms.Label();
-            this.txtLotNumber = new System.Windows.Forms.TextBox();
             this.lblLotNumber = new System.Windows.Forms.Label();
             this.txtItemNumber = new System.Windows.Forms.TextBox();
             this.lblItemNumber = new System.Windows.Forms.Label();
@@ -100,6 +99,7 @@
             this.cItemNumber = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn1 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.cQuantityReceive = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dtpLotNumber = new System.Windows.Forms.DateTimePicker();
             this.txtReceiveNumber = new Calbee.WMS.UI.UserControls.AutoCompleteTextBox();
             this.tabReceive.SuspendLayout();
             this.tabReceiveItem.SuspendLayout();
@@ -120,6 +120,7 @@
             // 
             // tabReceiveItem
             // 
+            this.tabReceiveItem.Controls.Add(this.dtpLotNumber);
             this.tabReceiveItem.Controls.Add(this.txtDescription);
             this.tabReceiveItem.Controls.Add(this.lblDescription);
             this.tabReceiveItem.Controls.Add(this.txtReceiveNumber);
@@ -138,7 +139,6 @@
             this.tabReceiveItem.Controls.Add(this.lblQuantity);
             this.tabReceiveItem.Controls.Add(this.dtpExpiryDate);
             this.tabReceiveItem.Controls.Add(this.lblExpiryDate);
-            this.tabReceiveItem.Controls.Add(this.txtLotNumber);
             this.tabReceiveItem.Controls.Add(this.lblLotNumber);
             this.tabReceiveItem.Controls.Add(this.txtItemNumber);
             this.tabReceiveItem.Controls.Add(this.lblItemNumber);
@@ -159,19 +159,19 @@
             this.txtDescription.BackColor = System.Drawing.Color.White;
             this.txtDescription.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(83, 122);
+            this.txtDescription.Location = new System.Drawing.Point(70, 122);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
-            this.txtDescription.Size = new System.Drawing.Size(147, 34);
+            this.txtDescription.Size = new System.Drawing.Size(160, 34);
             this.txtDescription.TabIndex = 85;
             // 
             // lblDescription
             // 
             this.lblDescription.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblDescription.Location = new System.Drawing.Point(6, 125);
+            this.lblDescription.Location = new System.Drawing.Point(3, 125);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(75, 13);
+            this.lblDescription.Size = new System.Drawing.Size(64, 13);
             this.lblDescription.Text = "Description";
             // 
             // cmbUOM
@@ -181,7 +181,7 @@
             this.cmbUOM.ForeColor = System.Drawing.Color.Black;
             this.cmbUOM.Location = new System.Drawing.Point(159, 178);
             this.cmbUOM.Name = "cmbUOM";
-            this.cmbUOM.Size = new System.Drawing.Size(72, 18);
+            this.cmbUOM.Size = new System.Drawing.Size(74, 18);
             this.cmbUOM.TabIndex = 8;
             // 
             // lblResultCounter
@@ -206,9 +206,9 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.btnBack.Location = new System.Drawing.Point(86, 243);
+            this.btnBack.Location = new System.Drawing.Point(80, 243);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(65, 20);
+            this.btnBack.Size = new System.Drawing.Size(73, 20);
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "<- Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -238,17 +238,17 @@
             this.dtpReceiveDate.CustomFormat = "dd-MM-yyyy";
             this.dtpReceiveDate.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.dtpReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpReceiveDate.Location = new System.Drawing.Point(83, 220);
+            this.dtpReceiveDate.Location = new System.Drawing.Point(71, 220);
             this.dtpReceiveDate.Name = "dtpReceiveDate";
-            this.dtpReceiveDate.Size = new System.Drawing.Size(148, 19);
+            this.dtpReceiveDate.Size = new System.Drawing.Size(161, 19);
             this.dtpReceiveDate.TabIndex = 10;
             // 
             // lblReceiveDate
             // 
             this.lblReceiveDate.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblReceiveDate.Location = new System.Drawing.Point(6, 225);
+            this.lblReceiveDate.Location = new System.Drawing.Point(3, 225);
             this.lblReceiveDate.Name = "lblReceiveDate";
-            this.lblReceiveDate.Size = new System.Drawing.Size(75, 13);
+            this.lblReceiveDate.Size = new System.Drawing.Size(64, 13);
             this.lblReceiveDate.Text = "Receive Date";
             // 
             // cmbItemStatus
@@ -256,17 +256,17 @@
             this.cmbItemStatus.BackColor = System.Drawing.Color.White;
             this.cmbItemStatus.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.cmbItemStatus.ForeColor = System.Drawing.Color.Black;
-            this.cmbItemStatus.Location = new System.Drawing.Point(83, 199);
+            this.cmbItemStatus.Location = new System.Drawing.Point(70, 199);
             this.cmbItemStatus.Name = "cmbItemStatus";
-            this.cmbItemStatus.Size = new System.Drawing.Size(148, 18);
+            this.cmbItemStatus.Size = new System.Drawing.Size(163, 18);
             this.cmbItemStatus.TabIndex = 9;
             // 
             // lblItemStatus
             // 
             this.lblItemStatus.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblItemStatus.Location = new System.Drawing.Point(6, 202);
+            this.lblItemStatus.Location = new System.Drawing.Point(3, 202);
             this.lblItemStatus.Name = "lblItemStatus";
-            this.lblItemStatus.Size = new System.Drawing.Size(75, 14);
+            this.lblItemStatus.Size = new System.Drawing.Size(64, 14);
             this.lblItemStatus.Text = "Item Status";
             // 
             // lblUOM
@@ -282,18 +282,18 @@
             this.txtQuantity.BackColor = System.Drawing.Color.White;
             this.txtQuantity.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(83, 178);
+            this.txtQuantity.Location = new System.Drawing.Point(70, 178);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(49, 18);
+            this.txtQuantity.Size = new System.Drawing.Size(62, 18);
             this.txtQuantity.TabIndex = 7;
             this.txtQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantity_KeyDown);
             // 
             // lblQuantity
             // 
             this.lblQuantity.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblQuantity.Location = new System.Drawing.Point(6, 181);
+            this.lblQuantity.Location = new System.Drawing.Point(3, 181);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(75, 15);
+            this.lblQuantity.Size = new System.Drawing.Size(64, 15);
             this.lblQuantity.Text = "Quantity";
             // 
             // dtpExpiryDate
@@ -301,37 +301,25 @@
             this.dtpExpiryDate.CustomFormat = "dd-MM-yyyy";
             this.dtpExpiryDate.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.dtpExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpExpiryDate.Location = new System.Drawing.Point(159, 157);
+            this.dtpExpiryDate.Location = new System.Drawing.Point(161, 157);
             this.dtpExpiryDate.Name = "dtpExpiryDate";
-            this.dtpExpiryDate.Size = new System.Drawing.Size(72, 19);
+            this.dtpExpiryDate.Size = new System.Drawing.Size(71, 19);
             this.dtpExpiryDate.TabIndex = 6;
             // 
             // lblExpiryDate
             // 
             this.lblExpiryDate.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblExpiryDate.Location = new System.Drawing.Point(135, 160);
+            this.lblExpiryDate.Location = new System.Drawing.Point(140, 160);
             this.lblExpiryDate.Name = "lblExpiryDate";
-            this.lblExpiryDate.Size = new System.Drawing.Size(23, 15);
+            this.lblExpiryDate.Size = new System.Drawing.Size(22, 15);
             this.lblExpiryDate.Text = "Exp.";
-            // 
-            // txtLotNumber
-            // 
-            this.txtLotNumber.BackColor = System.Drawing.Color.White;
-            this.txtLotNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.txtLotNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtLotNumber.Location = new System.Drawing.Point(83, 158);
-            this.txtLotNumber.MaxLength = 50;
-            this.txtLotNumber.Name = "txtLotNumber";
-            this.txtLotNumber.Size = new System.Drawing.Size(49, 18);
-            this.txtLotNumber.TabIndex = 5;
-            this.txtLotNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLotNumber_KeyDown);
             // 
             // lblLotNumber
             // 
             this.lblLotNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblLotNumber.Location = new System.Drawing.Point(6, 161);
+            this.lblLotNumber.Location = new System.Drawing.Point(3, 161);
             this.lblLotNumber.Name = "lblLotNumber";
-            this.lblLotNumber.Size = new System.Drawing.Size(75, 14);
+            this.lblLotNumber.Size = new System.Drawing.Size(64, 14);
             this.lblLotNumber.Text = "Lot Number";
             // 
             // txtItemNumber
@@ -339,18 +327,18 @@
             this.txtItemNumber.BackColor = System.Drawing.Color.White;
             this.txtItemNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.txtItemNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtItemNumber.Location = new System.Drawing.Point(83, 102);
+            this.txtItemNumber.Location = new System.Drawing.Point(70, 102);
             this.txtItemNumber.Name = "txtItemNumber";
-            this.txtItemNumber.Size = new System.Drawing.Size(147, 18);
+            this.txtItemNumber.Size = new System.Drawing.Size(160, 18);
             this.txtItemNumber.TabIndex = 4;
             this.txtItemNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemNumber_KeyDown);
             // 
             // lblItemNumber
             // 
             this.lblItemNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblItemNumber.Location = new System.Drawing.Point(6, 105);
+            this.lblItemNumber.Location = new System.Drawing.Point(3, 105);
             this.lblItemNumber.Name = "lblItemNumber";
-            this.lblItemNumber.Size = new System.Drawing.Size(75, 14);
+            this.lblItemNumber.Size = new System.Drawing.Size(64, 14);
             this.lblItemNumber.Text = "Item Number";
             // 
             // txtReceiveLPN
@@ -358,18 +346,18 @@
             this.txtReceiveLPN.BackColor = System.Drawing.Color.White;
             this.txtReceiveLPN.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.txtReceiveLPN.ForeColor = System.Drawing.Color.Black;
-            this.txtReceiveLPN.Location = new System.Drawing.Point(83, 82);
+            this.txtReceiveLPN.Location = new System.Drawing.Point(70, 82);
             this.txtReceiveLPN.Name = "txtReceiveLPN";
-            this.txtReceiveLPN.Size = new System.Drawing.Size(147, 18);
+            this.txtReceiveLPN.Size = new System.Drawing.Size(160, 18);
             this.txtReceiveLPN.TabIndex = 3;
             this.txtReceiveLPN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtReceiveLPN_KeyDown);
             // 
             // lblReceiveLPN
             // 
             this.lblReceiveLPN.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblReceiveLPN.Location = new System.Drawing.Point(6, 85);
+            this.lblReceiveLPN.Location = new System.Drawing.Point(3, 85);
             this.lblReceiveLPN.Name = "lblReceiveLPN";
-            this.lblReceiveLPN.Size = new System.Drawing.Size(75, 13);
+            this.lblReceiveLPN.Size = new System.Drawing.Size(64, 13);
             this.lblReceiveLPN.Text = "Receive LPN";
             // 
             // txtReceiveLocation
@@ -377,34 +365,34 @@
             this.txtReceiveLocation.BackColor = System.Drawing.Color.White;
             this.txtReceiveLocation.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.txtReceiveLocation.ForeColor = System.Drawing.Color.Black;
-            this.txtReceiveLocation.Location = new System.Drawing.Point(83, 62);
+            this.txtReceiveLocation.Location = new System.Drawing.Point(70, 62);
             this.txtReceiveLocation.Name = "txtReceiveLocation";
-            this.txtReceiveLocation.Size = new System.Drawing.Size(147, 18);
+            this.txtReceiveLocation.Size = new System.Drawing.Size(160, 18);
             this.txtReceiveLocation.TabIndex = 2;
             this.txtReceiveLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtReceiveLocation_KeyDown);
             // 
             // lblReceiveLocation
             // 
             this.lblReceiveLocation.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblReceiveLocation.Location = new System.Drawing.Point(6, 65);
+            this.lblReceiveLocation.Location = new System.Drawing.Point(3, 65);
             this.lblReceiveLocation.Name = "lblReceiveLocation";
-            this.lblReceiveLocation.Size = new System.Drawing.Size(75, 14);
-            this.lblReceiveLocation.Text = "Receive Location";
+            this.lblReceiveLocation.Size = new System.Drawing.Size(64, 14);
+            this.lblReceiveLocation.Text = "Rec. Location";
             // 
             // lblReceiveNumber
             // 
             this.lblReceiveNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblReceiveNumber.Location = new System.Drawing.Point(6, 44);
+            this.lblReceiveNumber.Location = new System.Drawing.Point(3, 44);
             this.lblReceiveNumber.Name = "lblReceiveNumber";
-            this.lblReceiveNumber.Size = new System.Drawing.Size(75, 13);
-            this.lblReceiveNumber.Text = "Receive Number";
+            this.lblReceiveNumber.Size = new System.Drawing.Size(64, 13);
+            this.lblReceiveNumber.Text = "Rec. Number";
             // 
             // lblOrderNumber
             // 
             this.lblOrderNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
-            this.lblOrderNumber.Location = new System.Drawing.Point(6, 24);
+            this.lblOrderNumber.Location = new System.Drawing.Point(3, 24);
             this.lblOrderNumber.Name = "lblOrderNumber";
-            this.lblOrderNumber.Size = new System.Drawing.Size(75, 13);
+            this.lblOrderNumber.Size = new System.Drawing.Size(64, 13);
             this.lblOrderNumber.Text = "Order Number";
             // 
             // txtOrderNumber
@@ -412,9 +400,9 @@
             this.txtOrderNumber.BackColor = System.Drawing.Color.White;
             this.txtOrderNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
             this.txtOrderNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtOrderNumber.Location = new System.Drawing.Point(83, 21);
+            this.txtOrderNumber.Location = new System.Drawing.Point(70, 21);
             this.txtOrderNumber.Name = "txtOrderNumber";
-            this.txtOrderNumber.Size = new System.Drawing.Size(147, 18);
+            this.txtOrderNumber.Size = new System.Drawing.Size(160, 18);
             this.txtOrderNumber.TabIndex = 0;
             this.txtOrderNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrderNumber_KeyDown);
             // 
@@ -726,13 +714,23 @@
             // 
             this.cQuantityReceive.Format = "";
             // 
+            // dtpLotNumber
+            // 
+            this.dtpLotNumber.CustomFormat = "dd-MM-yyyy";
+            this.dtpLotNumber.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular);
+            this.dtpLotNumber.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpLotNumber.Location = new System.Drawing.Point(70, 157);
+            this.dtpLotNumber.Name = "dtpLotNumber";
+            this.dtpLotNumber.Size = new System.Drawing.Size(70, 19);
+            this.dtpLotNumber.TabIndex = 100;
+            // 
             // txtReceiveNumber
             // 
             this.txtReceiveNumber.BackColor = System.Drawing.Color.White;
             this.txtReceiveNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtReceiveNumber.Location = new System.Drawing.Point(83, 41);
+            this.txtReceiveNumber.Location = new System.Drawing.Point(70, 41);
             this.txtReceiveNumber.Name = "txtReceiveNumber";
-            this.txtReceiveNumber.Size = new System.Drawing.Size(112, 18);
+            this.txtReceiveNumber.Size = new System.Drawing.Size(125, 18);
             this.txtReceiveNumber.TabIndex = 70;
             this.txtReceiveNumber.SelectedIndexChangeds += new System.EventHandler(this.txtReceiveNumber_SelectedIndexChangeds);
             this.txtReceiveNumber.KeyDowns += new System.Windows.Forms.KeyEventHandler(this.txtReceiveNumber_KeyDowns);
@@ -781,7 +779,6 @@
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.DateTimePicker dtpExpiryDate;
         private System.Windows.Forms.Label lblExpiryDate;
-        private System.Windows.Forms.TextBox txtLotNumber;
         private System.Windows.Forms.Label lblLotNumber;
         private System.Windows.Forms.TextBox txtItemNumber;
         private System.Windows.Forms.Label lblItemNumber;
@@ -835,5 +832,6 @@
         private System.Windows.Forms.DataGridTextBoxColumn cQuantityReceive;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.DateTimePicker dtpLotNumber;
     }
 }

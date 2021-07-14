@@ -100,3 +100,5 @@ v.1.0.0.32 By Pattaranon.ply 2021-02-24
 	- แก้ไขหน้าจอ CountLPN เพิ่มฟิวส์การแสดงข้อมูลเพิ่มเติม
 v.1.0.0.33 By Pattaranon.ply 2021-04-28
 	- แก้ไขหน้าจอ CountLPN ให้ scan countno ได้
+v.1.0.0.34 By Pattaranon.ply 2021-07-14
+	- แก้ไขหน้า frmReceiveRawMaterial.cs ปรับ Lot ให้เป็น Datetimepicker
