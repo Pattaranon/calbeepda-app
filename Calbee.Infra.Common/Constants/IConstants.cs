@@ -52,6 +52,6 @@ namespace Calbee.Infra.Common.Constants
         /// Y = Windows CE
         /// N = Windows Client
         /// </summary>
-        public static string platformWinCE = "N";
+        public static string platformWinCE = "Y";
     }
 }
